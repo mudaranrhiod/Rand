@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panda Panda Panda</title>
-    <meta content="/assets/crushyou.jpg" property="og:image" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <link rel="stylesheet" href="/lanyard/style.css">
+    <script src="/lanyard/lanyard.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="text-section">
-            <h1>Hello</h1>
-        </div>
-        <div class="image-section">
-            <img alt="This is me if you care" src="https://git.creations.works/mudaranrhiod/pages/raw/branch/static-pages/assets/redpanda.jpg">
+    <div class="container-nav">
+        <mdui-segmented-button-group full-width>
+         <mdui-segmented-button href="/" target="_self">Home</mdui-segmented-button>
+         <mdui-segmented-button href="/pages/shoppinglist.html" target="_self">Something</mdui-segmented-button>
+         <mdui-segmented-button href="/pages/socials.html" target="_self">Socials</mdui-segmented-button>
+        </mdui-segmented-button-group>
     </div>
+
+    <div class="userinfo" id="margin">
+        <mdui-snackbar class="wot-snackbar">The wheel weaves as the wheel wills</mdui-snackbar>
+        <img id="avatar" draggable="false" alt="profile picture" width="64" height="64"
+            src="https://api.lanyard.rest/807170846497570848.png" />
+    </div>
+    
 </body>
 </html>
+
+<script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+<script>
+    const snackbar = document.querySelector(".wot-snackbar");
+    const openButton = snackbar.nextElementSibling;
+    openButton.addEventListener("click", () => snackbar.open = true);
+</script>

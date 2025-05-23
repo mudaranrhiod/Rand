@@ -1,0 +1,17 @@
+.userinfo {
+  height: 30em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#avatar {
+    border-radius: 50%;
+}
+
+.activity-card {
+    align-items: center;
+    display: block;
+    justify-content: center;
+}
