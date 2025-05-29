@@ -70,6 +70,6 @@ mdui-card {
 }
 
 .wot-snackbar {
-    background-color: var(--text-2);
+    background-color: var(--text-1);
     color: var(--bg-2);
 }

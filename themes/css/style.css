@@ -68,8 +68,3 @@ mdui-card {
     margin: auto;
     padding: 1.5em;
 }
-
-.wot-snackbar {
-    background-color: var(--text-2);
-    color: var(--bg-2);
-}

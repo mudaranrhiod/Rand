@@ -29,19 +29,18 @@ mdui-segmented-button:hover {
     background-color: var(--hover-1);
 }
 
-.card-container {
+.vencord-card-container {
     padding-top: 10%;
 }
 
-.card-container h2 {
+.vencord-card-container h2 {
     color: var(--text-1);
 }
 
-.card-container a {
-    color: var(--text-link);
-    text-decoration: none;
+.vencord-card-container p {
+    color: var(--text-2);
 }
-}
+
 
 mdui-card {
     align-items: center;

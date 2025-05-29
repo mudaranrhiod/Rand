@@ -69,3 +69,13 @@ img {
     padding-right: 5px;
     margin: auto;
 }
+
+@media (max-width: 768px) {
+    .container-nav {
+        max-width: 90%;
+    }
+
+    mdui-card {
+        max-width: 90%;
+    }
+}
