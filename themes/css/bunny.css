@@ -30,7 +30,7 @@ mdui-segmented-button:hover {
 }
 
 .bunny-card-container {
-    padding-top: 10%;
+    padding-top: 5%
 }
 
 .bunny-card-container h2 {
@@ -53,7 +53,7 @@ mdui-card {
     justify-content: center;
     flex-direction: column;
 
-    max-width: 40%;
+    max-width: 60%;
     max-height: 40%;
     margin: auto;
     padding: 1.5em;
@@ -79,4 +79,73 @@ mdui-divider {
 
 .button-elevated:hover {
     background-color: var(--button-primary-hover);
+}
+
+mdui-snackbar {
+    background-color: var(--text-1);
+    color: var(--bg-2);
+}
+
+.info-buttons-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
+}
+
+.info-buttons {
+    color: var(--info-foreground);
+    top: 30px;
+}
+
+.info-buttons:hover {
+    background-color: var(--info-hover);
+    color: var(--bg-2);
+}
+
+.separator-circle {
+  width: 6px;
+  height: 6px;
+  background-color: var(--info-background);
+  border-radius: 50%;
+  margin: 0 5px;
+  
+  top: 30px;
+  position: relative;
+}
+
+.panel {
+    --mdui-color-background: red !important;
+}
+
+mdui-text-field {
+    padding-top: 20px;
+}
+
+code {
+    background: var(--bg-3);
+    color: var(--text-1);
+    border-radius: 4px;
+    font-family: monospace;
+    margin: -.2em 0;
+    padding: 0.2em;
+}
+
+@media (max-width: 768px) {
+    mdui-card {
+    align-items: center;
+    background-color: var(--bg-card);
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+
+    max-width: 90%;
+    max-height: 40%;
+    margin: auto;
+    padding: 1.5em;
+}
+
+.container-nav {
+    padding-top: 15px;
+}
 }

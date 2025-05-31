@@ -73,3 +73,10 @@ mdui-card {
     background-color: var(--text-1);
     color: var(--bg-2);
 }
+
+@media (max-width: 768px) {
+    .container-nav {
+        max-width: 90%;
+        padding-top: 15px
+    }
+}

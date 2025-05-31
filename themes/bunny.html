@@ -36,6 +36,29 @@
             <p><span style="color: var(--text-1);">City fog</span></p>
             <mdui-button class="copy" data-copy="https://bunny.mudaranrhiod.xyz/cityfog/cityfog.json">Copy link</mdui-button>
             <mdui-button class="button-elevated" variant="elevated" href="https://kinzoku.one/city-fog/" target="_blank">Palette</mdui-button>
+
+            <br>
+            <div class="info-buttons-container">
+                <mdui-dialog close-on-overlay-click class="info-dialog">
+                    <span slot="headline">Themes+ is used for the mention line, custom icon overlays and other stuff which I forgor</span>
+                    <span slot="description">
+                        <ul>
+                            <li>Copy link</li>
+                            <li>Head to <code>Bunny/Revenge</code> > <code>Plugins</code> > <code>+</code></li>
+                            <mdui-text-field autosize min-rows="1" max-rows="5" readonly label="Plugin link" value="https://revenge.nexpid.xyz/themes-plus"></mdui-text-field>
+                        </ul>
+                    </span>
+                </mdui-dialog>
+                <mdui-button class="info-buttons" variant="text">Themes+</mdui-button>
+
+                <span class="separator-circle"></span>
+                
+                <mdui-dialog close-on-overlay-click class="info-dialog">
+                    <span slot="headline">Installing</span>
+                    <span slot="description">Images will be permenantly removed from you account and all synced devices.</span>
+                </mdui-dialog>
+                <mdui-button class="info-buttons" variant="text">Install guide</mdui-button>
+            </div>
         </mdui-card>
     </div>
 </body>
@@ -43,4 +66,5 @@
 
 <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
 <script src="/themes/javascript/copybutton.js"></script>
+<script src="/themes/javascript/dialog.js"></script>
 <script src="/themes/javascript/snackbar.js"></script>

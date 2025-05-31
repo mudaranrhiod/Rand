@@ -73,6 +73,7 @@ img {
 @media (max-width: 768px) {
     .container-nav {
         max-width: 90%;
+        padding-top: 15px
     }
 
     mdui-card {
