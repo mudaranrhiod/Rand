@@ -125,7 +125,7 @@
     --mdui-color-surface-tint-color: var(--mdui-color-surface-tint-color-light);
     --mdui-color-scrim: var(--mdui-color-scrim-light);
     color: rgb(var(--mdui-color-on-background));
-    /*background-color: rgb(var(--mdui-color-background))*/
+    background-color: rgb(var(--mdui-color-background))
 }
 
 .mdui-theme-dark {
@@ -168,7 +168,7 @@
     --mdui-color-surface-tint-color: var(--mdui-color-surface-tint-color-dark);
     --mdui-color-scrim: var(--mdui-color-scrim-dark);
     color: rgb(var(--mdui-color-on-background));
-    /*background-color: rgb(var(--mdui-color-background))*/
+    background-color: rgb(var(--mdui-color-background))
 }
 
 @media (prefers-color-scheme: dark) {
@@ -212,7 +212,7 @@
         --mdui-color-surface-tint-color: var(--mdui-color-surface-tint-color-dark);
         --mdui-color-scrim: var(--mdui-color-scrim-dark);
         color: rgb(var(--mdui-color-on-background));
-        /*background-color: rgb(var(--mdui-color-background))*/
+        background-color: rgb(var(--mdui-color-background))
     }
 }
 
