@@ -30,7 +30,7 @@ mdui-segmented-button:hover {
 }
 
 .bunny-card-container {
-    padding-top: 5%
+    padding-top: 3%
 }
 
 .bunny-card-container h2 {
@@ -39,11 +39,16 @@ mdui-segmented-button:hover {
 
 .bunny-card-container p {
     color: var(--text-2);
+    margin-bottom: 0px;
 }
 
 .bunny-card-container a {
     color: var(--text-link);
     text-decoration: none;
+}
+
+.small-muted {
+    font-size: x-small;
 }
 
 mdui-card {
@@ -53,10 +58,11 @@ mdui-card {
     justify-content: center;
     flex-direction: column;
 
-    max-width: 60%;
+    max-width: 45%;
     max-height: 40%;
     margin: auto;
     padding: 1.5em;
+    padding-top: 0.5%;
 }
 
 mdui-divider {
@@ -66,6 +72,13 @@ mdui-divider {
 .copy {
     background-color: var(--candy-accent);
     color: var(--bg-2);
+   
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-top: 5px;
+    margin-right: -10px; /* Pulls the next button closer */
+
+    font-weight: 600;
 }
 
 .copy:hover {
@@ -74,10 +87,20 @@ mdui-divider {
 
 .button-elevated {
     background-color: var(--button-primary);
-    color: var(--text-1)
+    color: var(--text-1);
 }
 
-.button-elevated:hover {
+.button-elevated-icon {
+    background-color: var(--button-primary);
+    color: var(--text-1);
+    width: 25px;
+
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-top: 5px;
+}
+
+.button-elevated:hover, .button-elevated-icon:hover {
     background-color: var(--button-primary-hover);
 }
 
@@ -90,12 +113,17 @@ mdui-snackbar {
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 15px 30px;
 }
 
 .info-buttons {
     color: var(--info-foreground);
-    top: 30px;
+    top: 20px;
+
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-right: -20px; /* Pulls the next button closer */
+
+    font-weight: 600;
 }
 
 .info-buttons:hover {
@@ -110,12 +138,15 @@ mdui-snackbar {
   border-radius: 50%;
   margin: 0 5px;
   
-  top: 30px;
+  top: 20px;
   position: relative;
-}
 
-.panel {
-    --mdui-color-background: red !important;
+  flex-shrink: 0 !important; /* Prevent flexbox distortion */
+  align-self: center !important;
+
+  transform: scale(0.8);
+  transform-origin: left center;
+  
 }
 
 mdui-text-field {
@@ -131,21 +162,56 @@ code {
     padding: 0.2em;
 }
 
+.info-text {
+    color: var(--info-foreground) !important;
+}
+
+.cityfog-icon { 
+    border-radius: 50%;
+}
+
+.pallete-icon {
+  width: 24px;
+  height: 24px;
+  -webkit-mask: url(/icons/pallete.svg) no-repeat center;
+  mask: url(/icons/pallete.svg) no-repeat center;
+  background-color: var(--text-1);
+}
+
+.source-icon {
+  width: 24px;
+  height: 24px;
+  -webkit-mask: url(/icons/source.svg) no-repeat center;
+  mask: url(/icons/source.svg) no-repeat center;
+  background-color: var(--info-foreground);
+}
+
+.source-icon:hover {
+    background-color: var(--bg-2);
+}
+
 @media (max-width: 768px) {
+
+    .bunny-card-container {
+        padding-top: 5%
+    }
+
     mdui-card {
-    align-items: center;
-    background-color: var(--bg-card);
-    display: block;
-    justify-content: center;
-    flex-direction: column;
+        align-items: center;
+        background-color: var(--bg-card);
+        display: block;
+        justify-content: center;
+        flex-direction: column;
 
-    max-width: 90%;
-    max-height: 40%;
-    margin: auto;
-    padding: 1.5em;
-}
+        max-width: 90%;
+        max-height: 40%;
+        margin: auto;
+        padding: 1.5em;
+        padding-top: 0.5%;
+    }
 
-.container-nav {
-    padding-top: 15px;
-}
+    .container-nav {
+        max-width: 90%;
+        padding-top: 15px;
+    }
 }
