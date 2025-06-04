@@ -1,11 +1,11 @@
 const { snackbar } = mdui;
 
-const button = document.querySelector(".copy");
+const copyButtons = document.querySelectorAll(".copy");
 
-button.addEventListener("click", () => {
-  snackbar({
-    message: "Link Copied",
-    action: "Undo",
-    onActionClick: () => console.log("click action button")
+copyButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    snackbar({
+      message: "Link Copied",
+    });
   });
 });

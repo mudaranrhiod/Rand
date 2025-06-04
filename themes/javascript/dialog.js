@@ -1,4 +1,4 @@
-  const dialogs = document.querySelectorAll(".info-dialog");
+  const dialogs = document.querySelectorAll(".info-dialog, .preview-dialog");
 
   dialogs.forEach(dialog => {
   const openButton = dialog.nextElementSibling;
