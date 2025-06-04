@@ -21,7 +21,20 @@
 
 <div class="bunny-card-container">
         <mdui-card variant="elevated">
-            <h2>Themes</h2>
+            <h2>
+                Themes
+                <mdui-tooltip variant="rich" placement="bottom-left" content="bottom-left">
+                    <mdui-icon class="info" src="/icons/info.svg"></mdui-icon>
+                        <div slot="headline">Info</div>
+                        <div slot="content">
+                            <ul>
+                                <li>I don't maintain all of these btw</li>
+                                <li>Most of these themes need Themes+</li>
+                            </ul>
+                        </div>
+                </mdui-tooltip>
+                    
+            </h2>
             <p><span style="color: var(--text-1);">Eye Candy</span>
                 <br>Port of an old Aliucord theme</p>
             <mdui-button class="copy" data-copy="https://bunny.mudaranrhiod.xyz/eyecandy.json">Copy link</mdui-button>
@@ -29,6 +42,15 @@
             <mdui-button class="button-elevated-icon" variant="elevated" href="https://discord.com/channels/811255666990907402/824357609778708580/892389269375701033" target="_blank">
                 <img src="https://aliucord.com/aliucord.svg" alt="Aliucord logo" width="24" height="24">
             </mdui-button>
+            <mdui-collapse class="preview-container" accordion>
+                <mdui-collapse-item>
+                    <div slot="header">
+                <mdui-button class="preview-button">Preview</mdui-button>
+                    </div>
+                        <img class="theme-previews" src="/themes/assets/eyecandypreview-1.jpg">
+                        <img class="theme-previews" src="/themes/assets/eyecandypreview-2.jpg">
+                        <img class="theme-previews" src="/themes/assets/eyecandypreview-3.jpg">
+            </mdui-collapse-item>
 
             <p><span style="color: var(--text-1);">Eye Candy (Darker varient)</span>
                 <br>Uses slightly darker background colours</p>
@@ -37,6 +59,13 @@
             <p><span style="color: var(--text-1);">Rosie Blue</span>
                 <br>Blue rosie theme</p>
             <mdui-button class="copy" data-copy="https://bunny.mudaranrhiod.xyz/rosieblue.json">Copy link</mdui-button>
+                        <mdui-collapse class="preview-container" accordion>
+                <mdui-collapse-item>
+                    <div slot="header">
+                <mdui-button class="preview-button">Preview</mdui-button>
+                    </div>
+                        <img class="theme-previews" src="/themes/assets/rosieblue.jpg">
+            </mdui-collapse-item>
 
             <p><span style="color: var(--text-1);">Cadence</span>
                 <br>An improved Discord android for experience
@@ -49,14 +78,16 @@
             <mdui-button class="copy" data-copy="https://bunny.mudaranrhiod.xyz/cityfog/cityfog.json">Copy link</mdui-button>
             <mdui-button class="button-elevated-icon" variant="elevated" href="https://kinzoku.one/city-fog/" target="_blank">
                  <!-- <div class="pallete-icon"></div> --> 
-                 <img class="cityfog-icon" src="https://kinzoku.one/city-fog/favicon.ico" alt="Aliucord logo" width="24" height="24">
+                 <img class="cityfog-icon" src="https://kinzoku.one/city-fog/favicon.ico" alt="cityfog" width="24" height="24">
             </mdui-button>
 
             <br>
             <div class="info-buttons-container">
                 <mdui-dialog close-on-overlay-click class="info-dialog">
-                    <span slot="headline">Themes+ is used for the mention line, custom icon overlays and other stuff which I forgor</span>
+                    <span slot="headline">Themes+</span>
                     <span slot="description">
+                        <p>Themes+ is a plugin for Bunny that makes themes more customizable. It includes features such as recoloring icons, tweaking hardcoded colors & icon packs</p>
+                        <h4>To install Themes+</h4>
                         <ul>
                             <li>Copy link</li>
                             <li>Head to <code>Bunny/Revenge</code> > <code>Plugins</code> > <code>+</code></li>
