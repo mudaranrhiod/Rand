@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socials</title>
+    <link rel="stylesheet" href="/css/shoppinglist.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/mdui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+</head>
+<body>
+    <div class="container-nav">
+        <mdui-segmented-button-group full-width>
+         <mdui-segmented-button href="/" target="_self">Home</mdui-segmented-button>
+         <mdui-segmented-button href="/pages/shoppinglist.html" target="_self">Shopping list</mdui-segmented-button>
+         <mdui-segmented-button href="/pages/socials.html" target="_self">Socials</mdui-segmented-button>
+        </mdui-segmented-button-group>
+    </div>
+
+    <mdui-tabs placement="bottom" value="tab-1" class="list-tabs">
+        <mdui-tab value="tab-1">1</mdui-tab>
+        <mdui-tab value="tab-2">2</mdui-tab>
+        <mdui-tab value="tab-3">3</mdui-tab>
+        <mdui-tab value="tab-4">4</mdui-tab>
+
+        <mdui-tab-panel slot="panel" value="tab-1">
+            <div class="card-container">
+                <mdui-card variant="elevated">
+                    <h4>18/03/2025 - Iced coffee</h4>
+                    <ul>
+                        <li>Sentient double cream</li>
+                        <li>White sugar</li>
+                        <li>Indstrial super ice</li>
+                        <li>Ancient coffee beans</li>
+                    </ul>
+                </mdui-card>
+            </div>
+        </mdui-tab-panel>
+        <mdui-tab-panel slot="panel" value="tab-2">
+            <div class="card-container">
+                <mdui-card variant="elevated">
+                    <h4>10/01/2025 - Frozen chronicles</h4>
+                    <ul>
+                        <li>Frozen pizza</li>
+                        <li>Frozen huma-</li>
+                        <li>Frozen Bananananananananananana</li>
+                        <li>Frozen blueberry syrup</li>
+                    </ul>
+                </mdui-card>
+            </div>
+        </mdui-tab-panel>
+        <mdui-tab-panel slot="panel" value="tab-3">
+            <div class="card-container">
+                <mdui-card variant="elevated">
+                    <h4>20/11/2024 - Yes</h4>
+                    <ul>
+                        <li>Your mom (yes)</li>
+                        <li>BLÅHAJ (also yes)</li>
+                        <li><img src="https://cdn.discordapp.com/emojis/1373342025449214062.webp?size=48&name=catyes%7E1" alt="bleh" width="28" height="28"> (bleh I think)</li>
+                        <li>Weight loss pills for your fatass (not effective enough)</li>
+                    </ul>
+                </mdui-card>
+            </div>
+        </mdui-tab-panel>
+        <mdui-tab-panel slot="panel" value="tab-4">
+            <div class="card-container">
+                <mdui-card variant="elevated">
+                    <h4>September 12, 1473 BC - Info</h4>
+                    <p>This only exists because I have no idea what to put here and I kinda wanted to try the tabs component. Anything listed is fake/satire.</p>
+                </mdui-card>
+            </div>
+        </mdui-tab-panel>
+    </mdui-tabs>
+</body>
+
+<script type="module" src="/oneko.js"></script>
+
+<script src="https://unpkg.com/mdui@2/mdui.global.js"></script>

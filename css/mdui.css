@@ -8,7 +8,7 @@
 }
 
 :root {
-    --mdui-color-primary-light: 103, 80, 164;
+    --mdui-color-primary-light: 196, 162, 111;
     --mdui-color-primary-container-light: 234, 221, 255;
     --mdui-color-on-primary-light: 255, 255, 255;
     --mdui-color-on-primary-container-light: 33, 0, 94;
@@ -21,7 +21,7 @@
     --mdui-color-tertiary-container-light: 255, 216, 228;
     --mdui-color-on-tertiary-light: 255, 255, 255;
     --mdui-color-on-tertiary-container-light: 55, 11, 30;
-    --mdui-color-surface-light: 254, 247, 255;
+    --mdui-color-surface-light: 63, 62, 74;
     --mdui-color-surface-dim-light: 222, 216, 225;
     --mdui-color-surface-bright-light: 254, 247, 255;
     --mdui-color-surface-container-lowest-light: 255, 255, 255;
@@ -29,7 +29,7 @@
     --mdui-color-surface-container-light: 74, 72, 86;
     --mdui-color-surface-container-high-light: 63, 62, 74; /*Change rgb for background*/
     --mdui-color-surface-container-highest-light: 90, 77, 94; /*Change rgb for background, plugin link section*/
-    --mdui-color-surface-variant-light: 231, 224, 236;
+    --mdui-color-surface-variant-light: 63, 62, 74;
     --mdui-color-on-surface-light: 232, 232, 234;
     --mdui-color-on-surface-variant-light: 231, 231, 233;
     --mdui-color-inverse-surface-light: 49, 48, 51;
