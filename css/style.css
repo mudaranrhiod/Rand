@@ -80,3 +80,21 @@ mdui-card {
         padding-top: 15px
     }
 }
+
+/* Basic styling for content sections */
+.tab-content-wrapper {
+    margin-top: 1.5rem; /* Space below the buttons */
+    padding: 1.5rem;
+    background-color: var(--mdui-color-surface-container-low); /* Example MDUI theme color */
+    border-radius: var(--mdui-shape-corner-medium); /* Example MDUI border radius */
+}
+
+/* Hide content sections that are not active */
+.tab-panel:not(.active) {
+    display: none;
+}
+
+/* Optional: Additional container styling if needed */
+.container-nav {
+    padding: 1rem 0; /* Example padding */
+}

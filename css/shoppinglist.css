@@ -41,10 +41,11 @@ mdui-segmented-button:hover {
 
 .card-container h4 {
     color: var(--text-1);
+    text-align: center;
 }
 
 .card-container p {
-    color: var(--text-1);
+    color: var(--text-2);
 }
 
 .card-container ul {
@@ -66,6 +67,7 @@ mdui-card {
     max-height: 40%;
     margin: auto;
     padding: 1.5em;
+    padding-top: 0.5%;
 }
 
 @media (max-width: 768px) {
