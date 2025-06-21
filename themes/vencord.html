@@ -4,47 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vencord Themes</title>
-    
     <link rel="stylesheet" href="/themes/css/vencord.css">
     <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <link rel="stylesheet" href="/css/mdui.css">
     <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
 <body>
     <div class="container-nav">
         <mdui-segmented-button-group full-width>
-         <mdui-segmented-button href="/themes/bunny.html" target="_self">Bunny</mdui-segmented-button>
+         <mdui-segmented-button href="/themes/Bunny.html" target="_self">Bunny</mdui-segmented-button>
          <mdui-segmented-button href="/themes/vencord.html" target="_self">Vencord</mdui-segmented-button>
         </mdui-segmented-button-group>
     </div>
 
-    
+
 <div class="vencord-card-container">
         <mdui-card variant="elevated">
-            <h2>Themes</h2>
-            <p><span style="color: var(--text-1);">Eye Candy</span> - Based on an old Aliucord theme</p>
+            <h2>
+                Themes
+                <mdui-tooltip trigger="click" variant="rich" placement="bottom-left" content="bottom-left">
+                    <mdui-icon class="info" name="info--rounded"></mdui-icon>
+                        <div slot="headline">Info</div>
+                        <div slot="content">
+                            <ul>
+                                <li>Anything marked with an asterisk (*) requires the <code>Theme Atrribites</code> plugin enabled</li>
+                            </ul>
+                        </div>
+                </mdui-tooltip>
+            </h2>
+            <p><span style="color: var(--text-1);">Eye Candy</span>
+                <br>Port of an old Aliucord theme</p>
             <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/eyecandy.css">Copy link</mdui-button>
-            
-            <p><span style="color: var(--text-1);">Eye Candy (Darker varient)</span> - Uses slightly darker background colours</p>
+
+            <mdui-button class="button-elevated-icon" variant="elevated" href="https://discord.com/channels/811255666990907402/824357609778708580/892389269375701033" target="_blank">
+                <img src="https://aliucord.com/aliucord.svg" alt="Aliucord logo" width="24" height="24">
+            </mdui-button>
+            <mdui-collapse class="preview-container" accordion>
+                <mdui-collapse-item>
+                    <div slot="header">
+                <mdui-button class="preview-button">Preview</mdui-button>
+                    </div>
+                        <a href="/themes/assets/vencandy-1.png" target="_blank"><img class="theme-previews" src="/themes/assets/vencandy-1.png"></a>
+            </mdui-collapse-item>
+
+            <p><span style="color: var(--text-1);">Eye Candy (Darker varient)</span>
+                <br>Uses slightly darker background colours</p>
             <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/darkeyecandy.css">Copy link</mdui-button>
-            
+
             <p><span class="empty-line"></span></p>
             <mdui-divider></mdui-divider>
 
             <h2>Iconpacks</h2>
-            <p><span style="color: var(--text-1);">Solar</span> - Uses icons from the Solar iconset by designs480</p>
+
+            <p><span style="color: var(--text-1);">Solar</span>
+                <br>Uses icons from the Solar iconset by designs480</p>
             <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/solar.css">Copy link</mdui-button>
-             <mdui-button class="button-elevated" variant="elevated" href="https://www.figma.com/community/file/1166831539721848736/solar-icons-set" target="_blank">Figma</mdui-button>
-            
-            <p><span style="color: var(--text-1);">Solar (more icons)</span> - Adds Solar icons to places that don't have icons</p>
-            <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/moreicons.css">Copy link</mdui-button>
+
+            <mdui-button class="button-elevated" variant="elevated" href="https://www.figma.com/community/file/1166831539721848736/solar-icons-set" target="_blank">
+                Figma
+            </mdui-button>
+
+            <p><span style="color: var(--text-1);">Solar (more icons)<span style="color: var(--text-muted);">*</span>
+               </span>
+                <br>Adds Solar icons to places that don't have icons</p>
+            <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/solarmoreicons.css">Copy link</mdui-button>
+
+            <br>
+            <div class="info-buttons-container">
+
+                <mdui-dialog close-on-overlay-click class="info-dialog">
+                    <span slot="headline">Install guide</span>
+                    <span slot="description">
+                        <ul>
+                            <li>Copy the theme/iconpack link</li>
+                            <li>Head to <code>Settings</code> > under Vencord <code>themes</code> > <code>online themes</code> > paste the link on a new line</li>
+                        </ul>
+                    </span>
+                </mdui-dialog>
+                <mdui-button class="info-buttons" variant="text">Install guide</mdui-button>
+
+                <span class="separator-circle"></span>
+                
+                <mdui-button-icon class="info-buttons" href="https://github.com/mudaranrhiod/VencordThemes" target="_blank" variant="text" icon="code--rounded">
+                </mdui-button-icon>
+            </div>
         </mdui-card>
     </div>
 </body>
 </html>
 
 <script src="/oneko.js"></script>
-
 <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+
 <script src="/themes/javascript/copybutton.js"></script>
+<script src="/themes/javascript/dialog.js"></script>
 <script src="/themes/javascript/snackbar.js"></script>

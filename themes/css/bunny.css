@@ -32,7 +32,8 @@ mdui-segmented-button:hover {
 }
 
 .bunny-card-container {
-    padding-top: 3%
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .bunny-card-container h2 {
@@ -226,7 +227,8 @@ code {
 @media (max-width: 768px) {
 
     .bunny-card-container {
-        padding-top: 5%
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 
     mdui-card {
