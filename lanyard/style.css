@@ -6,7 +6,7 @@ body {
 /* Presence Container */
 .presence-container {
   padding: 20px;
-  padding-top: 70px;
+  padding-top: 30px;
 }
 
 /* User Profile Section */
@@ -15,7 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 24px;
+  padding-bottom: 10px;
 }
 
 .avatar-container {
@@ -84,14 +84,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
-  
-  justify-content: center;
-  align-items: center;
 }
 
 .activity-card {
-  background: var(--bg-3);
+  background: color-mix(in oklch, var(--bg-3), black 5%);
   border-radius: 8px;
   padding: 16px;
   position: relative;
@@ -100,7 +96,7 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 12px;
-  width: 45%;
+  
 }
 
 .activity-header {
@@ -234,7 +230,7 @@ body {
 }
 
 .activity-card {
-  background: var(--bg-3);
+  
   border-radius: 8px;
   padding: 16px;
   position: relative;

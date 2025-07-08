@@ -29,43 +29,27 @@ mdui-segmented-button:hover {
     background-color: var(--hover-1);
 }
 
-.container-nav {
-    align-items: center;
-    background-color: var(--bg-2);
-    padding-top: 10px;
-    justify-content: center;
-
-    max-width: 60%;
-    margin: auto;
-}
-
-mdui-segmented-button {
-    background-color: var(--bg-1);
-    color: var(--text-1);
-}
-
-mdui-segmented-button:hover {
-    background-color: var(--hover-1);
+.profile-container {
+    padding-top: 5%;
 }
 
 .card-container {
-    padding-top: 10%;
-}
-
-.card-container p {
-    color: var(--text-2);
+    padding-top: 2%;
 }
 
 mdui-card {
     align-items: center;
     background-color: var(--bg-card);
     display: block;
-    justify-content: center;
-    flex-direction: column;
 
     max-width: 40%;
     max-height: 40%;
     margin: auto;
+
+    border-radius: --mdui-shape-corner-large;
+}
+
+.social-card {
     padding: 1.5em;
 }
 
@@ -74,9 +58,46 @@ mdui-card {
     color: var(--bg-2);
 }
 
+mdui-chip {
+    background-color: var(--bg-4);
+    color: var(--text-muted);
+    display: inline-block;
+    padding: 5px;
+}
+
+mdui-chip:hover {
+    background-color: #5A4D5E8a;
+}
+
+i {
+    padding-right: 5px;
+}
+
+img {
+    padding-right: 5px;
+    margin: auto;
+}
+
+mdui-divider {
+    background: var(--text-2);
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
     .container-nav {
         max-width: 90%;
         padding-top: 15px
+    }
+
+    .card-container {
+    padding-top: 2%;
+    }
+
+    mdui-card {
+        max-width: 90%;
+    }
+
+    .social-card {
+        max-width: 90%;
     }
 }
