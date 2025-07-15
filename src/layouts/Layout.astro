@@ -1,0 +1,23 @@
+---
+import Navbar from '../components/Navbar.astro';
+import "/styles/globals.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/blobmoodlecozy.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>My Useless Website</title>
+    	<link rel="stylesheet" href="/themes/css/style.css">
+    	<link rel="stylesheet" href="/styles/mdui.css">
+    	<script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

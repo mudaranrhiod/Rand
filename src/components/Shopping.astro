@@ -1,0 +1,117 @@
+<div class="card-container">
+    <mdui-card class="main-card" variant="elevated">
+        <h3>A list of items that require purchasing as soon as possible to satisfy the one once known as Moodle.</h3>
+        <mdui-card class="list-card" variant="elevated">
+            <h4>13/06/2025</h4>
+            <ul>
+                <li>Aes Sedai Great Serpent ring</li>
+            </ul>
+        </mdui-card>
+        <mdui-card class="list-card" variant="elevated">
+            <h4>18/03/2025 - Iced coffee</h4>
+            <ul>
+                <li>Sentient double cream</li>
+                <li>White sugar</li>
+                <li>Industrial iced ice</li>
+                <li>Ancient coffee beans</li>
+            </ul>
+        </mdui-card>
+        <mdui-card class="list-card" variant="elevated">
+            <h4>10/01/2025 - Frozen foods</h4>
+            <ul>
+                <li>Frozen pizza</li>
+                <li>Frozen huma-</li>
+                <li>Frozen Banananananananana</li>
+                <li>Frozen blueberry syrup</li>
+            </ul>
+        </mdui-card>
+        <mdui-card class="list-card" variant="elevated">
+            <h4>20/11/2024 - h</h4>
+            <ul>
+                <li>Your mom (hot)</li>
+                <li>BLÅHAJ (yes)</li>
+                <li><img src="https://cdn.discordapp.com/emojis/1373342025449214062.webp?size=48&name=catyes%7E1" alt="bleh" width="28" height="28"> (bleh I think)</li>
+                <li>Weight loss pills for your fatass (not effective enough)</li>
+            </ul>
+        </mdui-card>
+        <mdui-card class="list-card" variant="elevated">
+            <h4>September 12, 1473 BC - Info</h4>
+            <p>This entire thing is fake/satire</p>
+        </mdui-card>
+    </mdui-card>
+</div>
+
+<style>
+.card-container {
+    padding-top: 2%;
+}
+
+mdui-card {
+    align-items: center;
+    background-color: var(--bg-card);
+    display: block;
+
+    max-width: 40%;
+    max-height: 40%;
+    margin: auto;
+
+    border-radius: var(--mdui-shape-corner-large);
+}
+
+.main-card {
+    padding: 1.5em;
+    padding-top: 1px;
+}
+
+.list-card {
+    background: color-mix(in oklch, var(--bg-3), black 5%);
+    max-width: 100%;
+    margin: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    border-radius: var(--mdui-shape-corner-small);
+}
+
+.main-card h3 {
+    color: var(--text-1);
+    
+}
+
+.list-card h4 {
+    color: var(--text-1);
+    margin-left: 20px;
+}
+
+.list-card p {
+    color: var(--text-2);
+    margin-left: 20px;
+}
+
+.list-card ul {
+    color: var(--text-2);
+}
+
+li::marker {
+    color: oklch(68.597% 0.10889 352.88);
+}
+
+@media (max-width: 768px) {
+    .container-nav {
+        max-width: 90%;
+        padding-top: 15px
+    }
+
+    .card-container {
+    padding-top: 5%;
+    }
+
+    mdui-card {
+        max-width: 90%;
+    }
+
+    .card-container {
+    padding-top: 5%;
+}
+}
+</style>

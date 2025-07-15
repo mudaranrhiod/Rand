@@ -1,0 +1,345 @@
+<div class="vencord-card-container">
+    <mdui-card variant="elevated">
+        <h2>
+            Themes
+            <mdui-tooltip trigger="click" variant="rich" placement="bottom-left" content="bottom-left">
+                <mdui-icon class="info" name="info--rounded"></mdui-icon>
+                    <div slot="headline">Info</div>
+                    <div slot="content">
+                        <ul>
+                            <li>Anything marked with an asterisk (*) requires the <code>Theme Atrribites</code> plugin enabled</li>
+                        </ul>
+                    </div>
+            </mdui-tooltip>
+        </h2>
+        <p><span style="color: var(--text-1);">Eye Candy</span>
+            <br>Port of an old Aliucord theme</p>
+        <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/eyecandy.css">Copy link</mdui-button>
+
+        <mdui-button class="button-elevated-icon" variant="elevated" href="https://discord.com/channels/811255666990907402/824357609778708580/892389269375701033" target="_blank">
+            <img src="https://aliucord.com/aliucord.svg" alt="Aliucord logo" width="24" height="24">
+        </mdui-button>
+        <mdui-collapse class="preview-container" accordion>
+             <mdui-collapse-item>
+                <div slot="header">
+            <mdui-button class="preview-button">Preview</mdui-button>
+                </div>
+                    <a id="vencandy" href="/src/assets/vencandy1.png" target="_blank"><img class="theme-previews" src="/src/assets/vencandy1.png"></a>
+        </mdui-collapse-item>
+
+        <p><span style="color: var(--text-1);">Eye Candy (Darker varient)</span>
+            <br>Uses slightly darker background colours</p>
+        <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/darkeyecandy.css">Copy link</mdui-button>
+
+        <p><span class="empty-line"></span></p>
+        <mdui-divider></mdui-divider>
+
+        <h2>Iconpacks</h2>
+
+        <p><span style="color: var(--text-1);">Solar</span>
+            <br>Uses icons from the Solar iconset by designs480</p>
+        <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/solar.css">Copy link</mdui-button>
+
+        <mdui-button class="button-elevated" variant="elevated" href="https://www.figma.com/community/file/1166831539721848736/solar-icons-set" target="_blank">
+            Figma
+        </mdui-button>
+
+        <p><span style="color: var(--text-1);">Solar (more icons)<span style="color: var(--text-muted);">*</span>
+            </span>
+            <br>Adds Solar icons to places that don't have icons</p>
+        <mdui-button class="copy" data-copy="https://vencord.mudaranrhiod.xyz/solarmoreicons.css">Copy link</mdui-button>
+
+        <br>
+        <div class="info-buttons-container">
+
+            <mdui-dialog close-on-overlay-click class="info-dialog">
+                <span slot="headline">Install guide</span>
+                <span slot="description">
+                    <ul>
+                        <li>Copy the theme/iconpack link</li>
+                        <li>Head to <code>Settings</code> > under Vencord <code>themes</code> > <code>online themes</code> > paste the link on a new line</li>
+                    </ul>
+                </span>
+            </mdui-dialog>
+            <mdui-button class="info-buttons" variant="text">Install guide</mdui-button>
+
+            <span class="separator-circle"></span>
+                
+            <mdui-button-icon class="info-buttons" href="https://github.com/mudaranrhiod/VencordThemes" target="_blank" variant="text" icon="code--rounded">
+            </mdui-button-icon>
+        </div>
+    </mdui-card>
+</div>
+
+<script>
+// I don't know how to make these work using src="../scripts/*.js" so I pasted the code itself (send help)
+
+document.querySelectorAll(".copy").forEach(copyButton => {
+    copyButton.addEventListener("click", () => {
+        const targetElement = copyButton.dataset.copy;
+        
+        navigator.clipboard.writeText(targetElement).then(() => {
+                
+        });
+    });
+});
+
+const dialogs = document.querySelectorAll(".info-dialog, .preview-dialog");
+
+dialogs.forEach(dialog => {
+const openButton = dialog.nextElementSibling;
+  
+if (openButton) {
+    openButton.addEventListener("click", () => dialog.open = true);
+  }
+});
+
+const { snackbar } = mdui;
+
+const copyButtons = document.querySelectorAll(".copy");
+
+copyButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    snackbar({
+      message: "Link Copied",
+    });
+  });
+});
+</script>
+
+<style>
+.vencord-card-container {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.vencord-card-container h2 {
+    color: var(--text-1);
+}
+
+.info {
+    float: right;
+}
+
+.vencord-card-container p {
+    color: var(--text-2);
+    margin-bottom: 0px;
+}
+
+.vencord-card-container a {
+    color: var(--text-link);
+    text-decoration: none;
+}
+
+.small-muted {
+    font-size: x-small;
+}
+
+mdui-card {
+    align-items: center;
+    background-color: var(--bg-card);
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+
+    max-width: 45%;
+    max-height: 40%;
+    margin: auto;
+    padding: 1.5em;
+    padding-top: 0.5%;
+}
+
+mdui-divider {
+    background-color: var(--text-muted);
+}
+
+.copy {
+    background-color: var(--candy-accent);
+    color: var(--bg-2);
+   
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-top: 5px;
+    margin-right: -10px; /* Pulls the next button closer */
+
+    font-weight: 600;
+}
+
+.copy:hover {
+    background-color: var(--candy-accent-hover);
+}
+
+.button-elevated {
+    background-color: var(--button-primary);
+    color: var(--text-1);
+}
+
+.button-elevated-icon {
+    background-color: var(--button-primary);
+    color: var(--text-1);
+    width: 25px;
+
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-top: 5px;
+}
+
+.button-elevated {
+    background-color: var(--button-primary);
+    color: var(--text-1);
+   
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-top: 5px;
+    margin-right: -10px; /* Pulls the next button closer */
+
+    font-weight: 600;
+}
+
+.button-elevated:hover {
+    background-color: var(--button-primary-hover);
+}
+
+.button-elevated:hover, .button-elevated-icon:hover {
+    background-color: var(--button-primary-hover);
+}
+
+mdui-snackbar {
+    background-color: var(--text-1);
+    color: var(--bg-2);
+}
+
+.preview-container {
+    display: block; 
+}
+
+.preview-button {
+    background-color: var(--candy-accent-2);
+    color: var(--bg-2);
+   
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-top: 5px;
+    margin-right: -10px; /* Pulls the next button closer */
+
+    font-weight: 600;
+}
+
+.preview-button:hover {
+    background-color: var(--candy-accent-2-hover);
+}
+
+.theme-previews {
+    width: 90%;
+
+    border-radius: 10px;
+}
+
+.info-buttons-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.info-buttons {
+    color: var(--info-foreground);
+    top: 20px;
+
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-right: -20px; /* Pulls the next button closer */
+
+    font-weight: 600;
+}
+
+.info-buttons:hover {
+    background-color: var(--info-hover);
+    color: var(--bg-2);
+}
+
+.separator-circle {
+  width: 6px;
+  height: 6px;
+  background-color: var(--info-background);
+  border-radius: 50%;
+  margin: 0 5px;
+  
+  top: 20px;
+  position: relative;
+
+  flex-shrink: 0 !important; /* Prevent flexbox distortion */
+  align-self: center !important;
+
+  transform: scale(0.8);
+  transform-origin: left center;
+  
+}
+
+mdui-text-field {
+    padding-top: 20px;
+}
+
+code {
+    background: var(--bg-3);
+    color: var(--text-1);
+    border-radius: 4px;
+    font-family: monospace;
+    margin: -.2em 0;
+    padding: 0.2em;
+}
+
+.info-text {
+    color: var(--info-foreground) !important;
+}
+
+.cityfog-icon { 
+    border-radius: 50%;
+}
+
+.pallete-icon {
+  width: 24px;
+  height: 24px;
+  -webkit-mask: url(/icons/pallete.svg) no-repeat center;
+  mask: url(/icons/pallete.svg) no-repeat center;
+  background-color: var(--text-1);
+}
+
+.source-icon {
+  width: 24px;
+  height: 24px;
+  -webkit-mask: url(/icons/source.svg) no-repeat center;
+  mask: url(/icons/source.svg) no-repeat center;
+  background-color: var(--info-foreground);
+}
+
+.source-icon:hover {
+    background-color: var(--bg-2);
+}
+
+@media (max-width: 768px) {
+
+    .vencord-card-container {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    mdui-card {
+        align-items: center;
+        background-color: var(--bg-card);
+        display: block;
+        justify-content: center;
+        flex-direction: column;
+
+        max-width: 90%;
+        max-height: 40%;
+        margin: auto;
+        padding: 1.5em;
+        padding-top: 0.5%;
+    }
+
+    .container-nav {
+        max-width: 90%;
+        padding-top: 15px;
+    }
+}
+</style>

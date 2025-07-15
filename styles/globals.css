@@ -1,8 +1,47 @@
-/* Base Styles */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+:root {
+
+--bg-1: oklch(0.41 0.0233 291.9);
+--bg-2: oklch(0.37 0.0204 289.18);
+--bg-3: oklch(0.4 0.0234 291.86);
+--bg-4: oklch(0.44 0.032 318.18);
+
+--bg-card: oklch(0.4 0.0253 294.38);
+
+--button-primary: oklch(0.47 0.0208 289.1);
+--button-primary-hover: oklch(0.38 0.0169 290.16);
+
+--candy-accent: oklch(0.73 0.0786 77.15);
+--candy-accent-hover: oklch(0.66 0.0965 76.28);
+--candy-accent-2: oklch(0.71 0.081 346.05);
+--candy-accent-2-hover: oklch(0.63 0.1103 347.59);
+--candy-green: oklch(0.79 0.0762 83.8);
+
+--hover-1: oklch(0.84 0.0249 306.91 / 24.31%);
+--hover-2: #10132033;
+
+--text-1: oklch(0.93 0.0027 286.35);
+--text-2: oklch(0.81 0.0196 282.68);
+--text-muted: oklch(0.79 0.0523 327.09);
+--text-link: oklch(0.9264 0.0536 68.9);
+--text-link-alt: oklch(0.8732 0.0937 67.64);
+
+--info-foreground: oklch(0.8079 0.0687 287.56);
+--info-background: oklch(0.8079 0.0687 287.56 / 14.9%);
+--info-hover: oklch(0.7015 0.1097 286.25);
 }
 
+html, body {
+    margin: 0px;
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--bg-2);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    padding-bottom: 10px;
+}
+
+/* Lanyard */
 /* Presence Container */
 .presence-container {
   padding: 20px;
