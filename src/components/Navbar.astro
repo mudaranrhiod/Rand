@@ -1,14 +1,27 @@
 <div class="container-nav">
-    <mdui-segmented-button-group full-width>
-        <mdui-segmented-button href="/" target="_self">Home</mdui-segmented-button>
-        <mdui-segmented-button href="/shoppinglist" target="_self">Shopping list</mdui-segmented-button>
-    </mdui-segmented-button-group>
+    <a data-ui="#page1">
+        <nav class="group connected">
+            <button class="border left-round">
+                <i>home</i>
+                <span>Home</span>
+            </button>
+        </nav>
+    </a>
+    <a data-ui="#page2">
+        <nav class="group connected">
+            <button class="border right-round">
+                <i>home</i>
+                <span>Shopping List</span>
+            </button>
+        </nav>
+    </a>
 </div>
 
 <style>
 .container-nav {
     align-items: center;
     padding-top: 10px;
+    display: flex;
     justify-content: center;
 
     max-width: 60%;

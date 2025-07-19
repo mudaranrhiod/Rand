@@ -1,129 +1,100 @@
 ---
 import lastFM from '../assets/icons/lastfm.svg';
 ---
-<div class="profile-container">
-    <mdui-card variant="elevated">
-        <div class="presence-container">
-            <div class="user-container">
-                <div class="avatar-container">
-                <mdui-snackbar class="wot-snackbar">The wheel weaves as the wheel wills</mdui-snackbar>
-                <img id="avatar" draggable="false" alt="profile picture" />
-                <div class="status-badge offline" id="status-badge"></div>
-            </div>
-            <div class="user-info">
-                <div id="username"></div>
-                <div id="user-status">
-                    <span class="status-indicator offline"></span>
+
+<div class="page active" id="page1">
+    <article>
+        <div class="profile-container">
+            <div class="presence-container">
+                <div class="user-container">
+                    <div class="avatar-container shape sided-cookie9 extra">
+                    <img id="avatar" class="responsive" draggable="false" alt="profile picture" />
+                    <div class="status-badge offline" id="status-badge"></div>
+                </div>
+                <div class="user-info">
+                    <div id="username"></div>
+                    <div id="user-status">
+
                     <span class="status-text"></span>
+                    <span class="status-indicator offline"></span>
+                </div>
                 </div>
             </div>
-        </div>
-        <div id="presence-data">
-            <!-- Activities will appear here -->
-        </div>
-        </div>
-    </mdui-card>
-</div>
-<div class="card-container">
-    <mdui-card class="social-card" variant="elevated">
-        <mdui-tooltip content="Mudaranrhiod">
-            <mdui-chip href="https://discord.com/users/807170846497570848" target="_blank" elevated><i class="bi bi-discord"></i>Discord</mdui-chip>
-        </mdui-tooltip>
-        <mdui-tooltip content="My emoji server">
-            <mdui-chip href="https://discord.gg/QAKs6UdeBS" target="_blank" elevated><i class="bi bi-discord"></i>My server</mdui-chip>
-        </mdui-tooltip>
-        <br/>
-        <mdui-tooltip content="moodlesaurusrex">
-            <mdui-chip href="https://www.tiktok.com/@moodlesaurusrex" target="_blank" elevated><i class="bi bi-tiktok"></i>Tiktok</mdui-chip>
-        </mdui-tooltip>
-        <mdui-tooltip content="IIV">
-            <mdui-chip href="https://t.meIIV_786" target="_blank" elevated> <i class="bi bi-telegram"></i>Telegram</mdui-chip>
-        </mdui-tooltip>
-        <mdui-tooltip content="mudaranrhiod.bannana.me">
-            <mdui-chip href="https://bsky.app/profile/mudaranrhiod.bannana.me" target="_blank" elevated><i class="bi bi-bluesky"></i>Blue Sky</mdui-chip>
-        </mdui-tooltip>
-        <br/>
 
-        <mdui-divider></mdui-divider>
-        <br/>
-        <mdui-tooltip content="Quinxxx">
-            <mdui-chip href="https://www.last.fm/user/Quinxxx" target="_blank" elevated> <img src={lastFM.src} height="16px" width="16px" />LastFM</mdui-chip>
-        </mdui-tooltip>
-        <mdui-tooltip content="YTM Playlist">
-            <mdui-chip href="https://music.youtube.com/playlist?list=PL1cu66qZ1RUoeQEoKUnLdd2X6uojwBb6L&si=Iv-7uswty5fIyk4E" target="_blank" elevated><i class="bi bi-youtube"></i>YTM playlist</mdui-chip>
-        </mdui-tooltip>
-        <mdui-tooltip content="Mud'rhiod">
-            <mdui-chip href="https://open.spotify.com/user/0prhvv7b4do7eqw59zwvgtwcn?si=5abf335ec9524c3a" target="_blank" elevated> <i class="bi bi-spotify"></i>Spotify</mdui-chip>
-        </mdui-tooltip>
-    </mdui-card>
+            <div id="presence-data">
+            <!-- Activities will appear here -->
+            </div>
+            </div>
+    </article>
+
+    <article class="socials">
+        <a class="chip fill" href="https://discord.com/users/807170846497570848" target="_blank">
+            <i class="bi bi-discord"></i>
+            <span>Discord</span>
+        </a>
+        <a class="chip fill" href="https://discord.gg/QAKs6UdeBS" target="_blank" >
+            <i class="bi bi-discord"></i>
+            <span>My server</span>
+        </a>
+        <br>
+        <a class="chip fill" href="https://www.tiktok.com/@moodlesaurusrex" target="_blank">
+            <i class="bi bi-tiktok"></i>
+            <span>Tiktok</span>
+        </a>
+        <a class="chip fill" href="https://t.me/IIV_786" target="_blank">
+            <i class="bi bi-telegram"></i>
+            <span>Telegram</span>
+        </a>
+        <a class="chip fill" href="https://bsky.app/profile/mudrhiod.bannana.me" target="_blank">
+            <i class="bi bi-bluesky"></i>
+            <span>Bluesky</span>
+        </a>
+
+        <hr class="large">
+
+        <a class="chip fill" href="https://www.last.fm/user/Quinxxx" target="_blank">
+            <img src={lastFM.src} height="16px" width="16px" />
+            <span>LastFM</span>
+        </a>
+        <a class="chip fill" href="https://music.youtube.com/playlist?list=PL1cu66qZ1RUoeQEoKUnLdd2X6uojwBb6L&si=Iv-7uswty5fIyk4E" target="_blank">
+            <i class="bi bi-youtube"></i>
+            <span>YTM playlist</span>
+        </a>
+        <a class="chip fill fill" href="https://open.spotify.com/user/0prhvv7b4do7eqw59zwvgtwcn?si=5abf335ec9524c3a" target="_blank">
+            <i class="bi bi-spotify"></i>
+            <span>Spotify</span>
+        </a>
+    </article>
+
 </div>
-    
+
 <!-- <script type="module" src="/scripts/lanyard.js"></script> -->
 <script src="../scripts/presence.js"></script>
-<script>
-    const snackbar = document.querySelector(".wot-snackbar");
-    const openButton = snackbar.nextElementSibling;
-    openButton.addEventListener("click", () => snackbar.open = true);
-</script>
 
 <style>
-.profile-container {
+.page {
     padding-top: 5%;
 }
 
-.card-container {
-    padding-top: 2%;
-}
-
-mdui-card {
+article {
     align-items: center;
     display: block;
 
     max-width: 40%;
     max-height: 40%;
     margin: auto;
-
-    border-radius: var(--mdui-shape-corner-large);
 }
 
-.social-card {
-    padding: 1.5em;
-}
-
-mdui-chip {
-    display: inline-block;
-    padding: 5px;
-}
-
-
-i {
-    padding-right: 5px;
-}
-
-img {
-    padding-right: 5px;
-    margin: auto;
-}
-
-mdui-divider {
+.socials {
     margin-top: 20px;
 }
 
+.chip {
+    margin-top: 0.5rem;
+}
+
 @media (max-width: 768px) {
-    .container-nav {
-        max-width: 90%;
-        padding-top: 15px
-    }
-
-    .card-container {
-    padding-top: 2%;
-    }
-
-    mdui-card {
-        max-width: 90%;
-    }
-
-    .social-card {
+    article {
         max-width: 90%;
     }
 }

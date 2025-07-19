@@ -12,8 +12,8 @@
 
 --candy-accent: oklch(0.73 0.0786 77.15);
 --candy-accent-hover: oklch(0.66 0.0965 76.28);
---candy-accent-2: oklch(0.71 0.081 346.05);
---candy-accent-2-hover: oklch(0.63 0.1103 347.59);
+--primary-container: oklch(0.71 0.081 346.05);
+--primary-container-hover: oklch(0.63 0.1103 347.59);
 --candy-green: oklch(0.79 0.0762 83.8);
 
 --hover-1: oklch(0.84 0.0249 306.91 / 24.31%);
@@ -43,7 +43,6 @@ body {
 /* Lanyard */
 /* Presence Container */
 .presence-container {
-  padding: 20px;
   padding-top: 30px;
 }
 
@@ -68,6 +67,13 @@ body {
   object-fit: cover;
 }
 
+.shape.sided-cookie9 img#avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
 .status-badge {
   position: absolute;
   bottom: 0;
@@ -75,14 +81,14 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 3px solid var(--bg-2);
+  border: 3px solid var(--surface-container-low);
 }
 
 /* Status Colors */
-.status-badge.online { background: oklch(0.7244 0.0841 134.29); }
-.status-badge.idle { background: oklch(0.7276 0.0932 83.59); }
-.status-badge.dnd { background: oklch(0.7095 0.068 52.63); }
-.status-badge.offline { background: oklch(0.568 0.0352 287.21); }
+.status-badge.online { background-color: #34A853; }
+.status-badge.idle { background-color: #FBBC05; }
+.status-badge.dnd { background-color: #EA4335; }
+.status-badge.offline { background-color: #9AA0A6; }
 
 /* User Info */
 .user-info {
@@ -94,7 +100,7 @@ body {
 #username {
   font-weight: 600;
   font-size: 1.25rem;
-  color: var(--text-1);
+  color: var(--on-surface);
   margin: 0;
   line-height: 1.2;
 }
@@ -108,7 +114,7 @@ body {
 
 .status-text {
   font-size: 0.875rem;
-  color: var(--text-2);
+  color: var(--on-surface-variant);
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
@@ -125,7 +131,7 @@ body {
 }
 
 .activity-card {
-  background: color-mix(in oklch, var(--bg-3), black 5%);
+  background: var(--surface-container);
   border-radius: 8px;
   padding: 16px;
   position: relative;
@@ -138,7 +144,7 @@ body {
 }
 
 .activity-header {
-  color: var(--text-1);
+  color: var(--on-surface);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -167,7 +173,7 @@ body {
 .activity-title {
   font-weight: 600;
   font-size: 1rem;
-  color: var(--text-1);
+  color: var(--on-surface);
   margin-bottom: 4px;
   white-space: nowrap;
   overflow: hidden;
@@ -176,7 +182,7 @@ body {
 
 .activity-detail {
   font-size: 0.875rem;
-  color: var(--text-2);
+  color: var(--on-surface-variant);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -191,7 +197,7 @@ body {
 .progress-container {
   width: 100%;
   height: 4px;
-  background: oklch(0.522 0.0281 290.49);
+  background: var(--on-secondary);
   border-radius: 2px;
   position: relative;
   overflow: hidden;
@@ -215,33 +221,33 @@ body {
 .timestamp-start,
 .timestamp-end {
   font-size: 0.6875rem;
-  color: var(--text-muted);
+  color: var(--secondary);
   line-height: 1;
 }
 
 /* Activity Type Specific Styles */
 .activity-card.spotify {
-  border-left: 3px solid var(--candy-accent-2);
+  border-left: 3px solid var(--primary-container);
 }
 
 .activity-card.spotify .activity-header {
-  color: var(--candy-accent-2);
+  color: var(--primary-container);
 }
 
 .activity-card.spotify .progress-bar-fill {
-  background-color: var(--candy-accent-2);
+  background-color: var(--primary-container);
 }
 
 .activity-card.playing .progress-bar-fill {
-  background-color: var(--candy-accent-2);
+  background-color: var(--primary-container);
 }
 
 .activity-card.streaming .progress-bar-fill {
-  background-color: var(--candy-accent-2);
+  background-color: var(--primary-container);
 }
 
 .activity-card.listening .progress-bar-fill {
-  background-color: var(--candy-accent-2);
+  background-color: var(--primary-container);
 }
 
 /* Empty State */
