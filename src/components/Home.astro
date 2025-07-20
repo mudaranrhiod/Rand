@@ -27,7 +27,15 @@ import lastFM from '../assets/icons/lastfm.svg';
             </div>
     </article>
 
-    <article class="socials">
+    <article class="about-me">
+        <ul class="list no-space">
+            <li>I love red pandas and cats</li>
+            <li>I think I have an odd obbsession with black pitted olives</li>
+            <li>I'm trying to learn JS (doing a bad job)</li>
+        </ul>
+    </article>
+    <article class="about-me">
+        <p class="large-text">You can find me on:</p>
         <a class="chip fill" href="https://discord.com/users/807170846497570848" target="_blank">
             <i class="bi bi-discord"></i>
             <span>Discord</span>
@@ -36,7 +44,6 @@ import lastFM from '../assets/icons/lastfm.svg';
             <i class="bi bi-discord"></i>
             <span>My server</span>
         </a>
-        <br>
         <a class="chip fill" href="https://www.tiktok.com/@moodlesaurusrex" target="_blank">
             <i class="bi bi-tiktok"></i>
             <span>Tiktok</span>
@@ -53,7 +60,7 @@ import lastFM from '../assets/icons/lastfm.svg';
         <hr class="large">
 
         <a class="chip fill" href="https://www.last.fm/user/Quinxxx" target="_blank">
-            <img src={lastFM.src} height="16px" width="16px" />
+            <img src={lastFM.src} height="10px" width="10px" />
             <span>LastFM</span>
         </a>
         <a class="chip fill" href="https://music.youtube.com/playlist?list=PL1cu66qZ1RUoeQEoKUnLdd2X6uojwBb6L&si=Iv-7uswty5fIyk4E" target="_blank">
@@ -85,8 +92,16 @@ article {
     margin: auto;
 }
 
-.socials {
+.large-text {
+    margin-left: 10px;
+}
+
+.about-me {
     margin-top: 20px;
+}
+
+.list>li {
+    white-space: wrap !important;
 }
 
 .chip {

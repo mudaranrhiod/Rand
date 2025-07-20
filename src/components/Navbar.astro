@@ -9,9 +9,17 @@
     </a>
     <a data-ui="#page2">
         <nav class="group connected">
-            <button class="border right-round">
-                <i>home</i>
+            <button class="border no-round">
+                <i>shopping_bag</i>
                 <span>Shopping List</span>
+            </button>
+        </nav>
+    </a>
+    <a data-ui="#page3">
+        <nav class="group connected">
+            <button class="border right-round">
+                <i>pets</i>
+                <span>Panda</span>
             </button>
         </nav>
     </a>
@@ -26,11 +34,12 @@
 
     max-width: 60%;
     margin: auto;
+    gap: .5rem;
 }
 
 @media (max-width: 768px) {
     .container-nav {
-        max-width: 90%;
+        max-width: 100%;
         padding-top: 15px
     }
 }

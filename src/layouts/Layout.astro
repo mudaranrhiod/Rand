@@ -21,3 +21,16 @@ import "/styles/globals.css";
 		<slot />
 	</body>
 </html>
+
+<script>
+	function theme(color) {
+  	ui("theme", color || "#c4a26f");
+}
+
+const mode = () => {
+	let newMode = ui("mode") == "dark" ? "light" : "dark";
+  	ui("mode", newMode);
+}
+
+window.addEventListener("DOMContentLoaded", () => theme());
+</script>
