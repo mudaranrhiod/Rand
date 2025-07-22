@@ -1,0 +1,24 @@
+<script is:inline>
+
+// List of themes
+// first time using arrays #cool #wow
+const themes = ["eyecandy", "ctp-frappe" , "ctp-macchiato" , "ctp-mocha", "cityfog"];
+
+function setTheme(theme) {
+  document.body.classList.remove(...themes);
+  document.body.classList.add(theme);
+  localStorage.setItem("theme", theme);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme")
+  const defaultTheme = "eyecandy";
+  setTheme(savedTheme || defaultTheme);
+});
+
+function resetTheme() {
+  localStorage.removeItem("theme");
+  setTheme("eyecandy");
+}
+
+</script>

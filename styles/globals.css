@@ -182,7 +182,7 @@ body {
 
 .activity-detail {
   font-size: 0.875rem;
-  color: var(--on-surface-variant);
+  color: var(--secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
