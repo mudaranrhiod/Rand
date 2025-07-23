@@ -1,5 +1,8 @@
 :root {
 
+/* To use default rounded icons */
+--font-icon: "Material Symbols Rounded";
+
 --bg-1: oklch(0.41 0.0233 291.9);
 --bg-2: oklch(0.37 0.0204 289.18);
 --bg-3: oklch(0.4 0.0234 291.86);
