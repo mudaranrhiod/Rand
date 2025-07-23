@@ -1,6 +1,9 @@
-:root,
-body.eyecandy {
+@import url('../styles/city-fog-theme.css');
+@import url('https://cdn.jsdelivr.net/npm/@catppuccin/palette/css/catppuccin.css');
 
+:root,
+
+body.eyecandy {
   /* eye candy vars */
   --ec-bg1: oklch(41.264% 0.0233 291.865);
   --ec-bg2: oklch(36.954% 0.02048 289.149);
@@ -69,12 +72,12 @@ body.eyecandy {
 } 
 
 body.ctp-frappe {
-  --primary: rgb(0, 255, 17);
-  --on-primary: #381e72;
-  --primary-container: #4f378a;
+  --primary: var(--ctp-frappe-blue);
+  --on-primary: var(--ctp-frappe-base);
+  --primary-container: var(--ctp-frappe-green);
   --on-primary-container: #e9ddff;
-  --secondary: #cbc2db;
-  --on-secondary: #332d41;
+  --secondary: var(--ctp-frappe-subtext1);
+  --on-secondary: var(--ctp-frappe-surface0);
   --secondary-container: #4a4458;
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
@@ -87,12 +90,12 @@ body.ctp-frappe {
   --on-error-container: #ffb4ab;
   --background: #1c1b1e;
   --on-background: #e6e1e6;
-  --surface: #141316;
-  --on-surface: #e6e1e6;
-  --surface-variant: #49454e;
-  --on-surface-variant: #cac4cf;
+  --surface: var(--ctp-frappe-mantle);
+  --on-surface: var(--ctp-frappe-text);
+  --surface-variant: var(--ctp-frappe-surface0);
+  --on-surface-variant: var(--ctp-frappe-subtext1);
   --outline: #948f99;
-  --outline-variant: #49454e;
+  --outline-variant: var(--ctp-frappe-surface0);
   --shadow: #000000;
   --scrim: #000000;
   --inverse-surface: #e6e1e6;
@@ -101,19 +104,19 @@ body.ctp-frappe {
   --surface-dim: #141316;
   --surface-bright: #3a383c;
   --surface-container-lowest: #0f0e11;
-  --surface-container-low: #1c1b1e;
-  --surface-container: #201f22;
-  --surface-container-high: #2b292d;
+  --surface-container-low: var(--ctp-frappe-base);
+  --surface-container: var(--ctp-frappe-crust);
+  --surface-container-high: var(--ctp-frappe-crust);
   --surface-container-highest: #363438;
 }
 
 body.ctp-macchiato {
-  --primary: rgb(55, 0, 255);
-  --on-primary: #381e72;
-  --primary-container: #4f378a;
+  --primary: var(--ctp-macchiato-blue);
+  --on-primary: var(--ctp-macchiato-base);
+  --primary-container: var(--ctp-macchiato-green);
   --on-primary-container: #e9ddff;
-  --secondary: #cbc2db;
-  --on-secondary: #332d41;
+  --secondary: var(--ctp-macchiato-subtext1);
+  --on-secondary: var(--ctp-macchiato-surface0);
   --secondary-container: #4a4458;
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
@@ -126,12 +129,12 @@ body.ctp-macchiato {
   --on-error-container: #ffb4ab;
   --background: #1c1b1e;
   --on-background: #e6e1e6;
-  --surface: #141316;
-  --on-surface: #e6e1e6;
-  --surface-variant: #49454e;
-  --on-surface-variant: #cac4cf;
+  --surface: var(--ctp-macchiato-mantle);
+  --on-surface: var(--ctp-macchiato-text);
+  --surface-variant: var(--ctp-macchiato-surface0);
+  --on-surface-variant: var(--ctp-macchiato-subtext1);
   --outline: #948f99;
-  --outline-variant: #49454e;
+  --outline-variant: var(--ctp-macchiato-surface0);
   --shadow: #000000;
   --scrim: #000000;
   --inverse-surface: #e6e1e6;
@@ -140,19 +143,19 @@ body.ctp-macchiato {
   --surface-dim: #141316;
   --surface-bright: #3a383c;
   --surface-container-lowest: #0f0e11;
-  --surface-container-low: #1c1b1e;
-  --surface-container: #201f22;
-  --surface-container-high: #2b292d;
+  --surface-container-low: var(--ctp-macchiato-base);
+  --surface-container: var(--ctp-macchiato-crust);
+  --surface-container-high: var(--ctp-macchiato-crust);
   --surface-container-highest: #363438;
 }
 
 body.ctp-mocha {
-  --primary: #ff0;
-  --on-primary: #381e72;
-  --primary-container: #4f378a;
+  --primary: var(--ctp-mocha-blue);
+  --on-primary: var(--ctp-mocha-base);
+  --primary-container: var(--ctp-mocha-green);
   --on-primary-container: #e9ddff;
-  --secondary: #cbc2db;
-  --on-secondary: #332d41;
+  --secondary: var(--ctp-mocha-subtext1);
+  --on-secondary: var(--ctp-mocha-surface0);
   --secondary-container: #4a4458;
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
@@ -165,12 +168,12 @@ body.ctp-mocha {
   --on-error-container: #ffb4ab;
   --background: #1c1b1e;
   --on-background: #e6e1e6;
-  --surface: #141316;
-  --on-surface: #e6e1e6;
-  --surface-variant: #49454e;
-  --on-surface-variant: #cac4cf;
+  --surface: var(--ctp-mocha-mantle);
+  --on-surface: var(--ctp-mocha-text);
+  --surface-variant: var(--ctp-mocha-surface0);
+  --on-surface-variant: var(--ctp-mocha-subtext1);
   --outline: #948f99;
-  --outline-variant: #49454e;
+  --outline-variant: var(--ctp-mocha-surface0);
   --shadow: #000000;
   --scrim: #000000;
   --inverse-surface: #e6e1e6;
@@ -179,19 +182,19 @@ body.ctp-mocha {
   --surface-dim: #141316;
   --surface-bright: #3a383c;
   --surface-container-lowest: #0f0e11;
-  --surface-container-low: #1c1b1e;
-  --surface-container: #201f22;
-  --surface-container-high: #2b292d;
+  --surface-container-low: var(--ctp-mocha-base);
+  --surface-container: var(--ctp-mocha-crust);
+  --surface-container-high: var(--ctp-mocha-crust);
   --surface-container-highest: #363438;
 }
 
 body.cityfog {
-  --primary: #ff0;
-  --on-primary: #381e72;
-  --primary-container: #4f378a;
+  --primary: var(--cf-acc0);
+  --on-primary: var(--cf-txt1);
+  --primary-container: var(--cf-acc1);
   --on-primary-container: #e9ddff;
-  --secondary: #cbc2db;
-  --on-secondary: #332d41;
+  --secondary: var(--cf-txt2);
+  --on-secondary: var(--cf-bg4);
   --secondary-container: #4a4458;
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
@@ -204,12 +207,12 @@ body.cityfog {
   --on-error-container: #ffb4ab;
   --background: #1c1b1e;
   --on-background: #e6e1e6;
-  --surface: #141316;
-  --on-surface: #e6e1e6;
-  --surface-variant: #49454e;
-  --on-surface-variant: #cac4cf;
+  --surface: var(--cf-bg0);
+  --on-surface: var(--cf-txt0);
+  --surface-variant: var(--cf-bg2);
+  --on-surface-variant: var(--cf-txt2);
   --outline: #948f99;
-  --outline-variant: #49454e;
+  --outline-variant: var(--cf-bg2);
   --shadow: #000000;
   --scrim: #000000;
   --inverse-surface: #e6e1e6;
@@ -218,8 +221,8 @@ body.cityfog {
   --surface-dim: #141316;
   --surface-bright: #3a383c;
   --surface-container-lowest: #0f0e11;
-  --surface-container-low: #1c1b1e;
-  --surface-container: #201f22;
-  --surface-container-high: #2b292d;
+  --surface-container-low: var(--cf-bg3);
+  --surface-container: var(--cf-bg1);
+  --surface-container-high: var(--cf-bg1);
   --surface-container-highest: #363438;
 }
