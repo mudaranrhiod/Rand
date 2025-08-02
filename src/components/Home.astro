@@ -3,7 +3,7 @@ import lastFM from '../assets/icons/lastfm.svg';
 ---
 
 <div class="page active" id="page1">
-    <article>
+    <article class="article">
         <div class="profile-container">
             <div class="presence-container">
                 <div class="user-container">
@@ -25,6 +25,23 @@ import lastFM from '../assets/icons/lastfm.svg';
             <!-- Activities will appear here -->
             </div>
             </div>
+        </div>
+        
+        <div>
+            <details>
+                <summary>
+                    <article class="round primary no-elevate">
+                        <nav>
+                            <div class="max">Reviews</div>
+                            <i>expand_more</i>
+                        </nav>
+                    </article>
+                </summary>
+                <ul id="user-reviews" class="list border">
+                    <!-- Reviews will appear here -->
+                </ul>
+                </details>
+        </div>
     </article>
 
     <article class="about-me">
@@ -77,13 +94,14 @@ import lastFM from '../assets/icons/lastfm.svg';
 
 <!-- <script type="module" src="/scripts/lanyard.js"></script> -->
 <script src="../scripts/presence.js"></script>
+<script src="../scripts/reviewdb.js"></script>
 
 <style>
 .page {
     padding-top: 5%;
 }
 
-article {
+.article, .about-me {
     align-items: center;
     display: block;
 
@@ -109,7 +127,7 @@ article {
 }
 
 @media (max-width: 768px) {
-    article {
+    .article, .about-me {
         max-width: 90%;
     }
 }
