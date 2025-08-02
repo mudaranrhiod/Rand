@@ -3,7 +3,7 @@ import lastFM from '../assets/icons/lastfm.svg';
 ---
 
 <div class="page active" id="page1">
-    <article class="article">
+    <article id="article">
         <div class="profile-container">
             <div class="presence-container">
                 <div class="user-container">
@@ -27,10 +27,10 @@ import lastFM from '../assets/icons/lastfm.svg';
             </div>
         </div>
         
-        <div>
+        <div class="reviews-container">
             <details>
                 <summary>
-                    <article class="round primary no-elevate">
+                    <article class="round border no-elevate">
                         <nav>
                             <div class="max">Reviews</div>
                             <i>expand_more</i>
@@ -44,16 +44,15 @@ import lastFM from '../assets/icons/lastfm.svg';
         </div>
     </article>
 
-    <article class="about-me">
+    <article id="about-me">
         <ul class="list no-space">
             <li>I love red pandas and cats</li>
             <li>I think I have an odd obbsession with black pitted olives</li>
             <li>I'm trying to learn JS (doing a bad job)</li>
         </ul>
-    </article>
-    <article class="about-me">
-        <p class="large-text">You can find me on:</p>
-        <a class="chip fill" href="https://discord.com/users/807170846497570848" target="_blank">
+
+        <nav class="scroll">
+            <a class="chip fill" href="https://discord.com/users/807170846497570848" target="_blank">
             <i class="bi bi-discord"></i>
             <span>Discord</span>
         </a>
@@ -73,9 +72,10 @@ import lastFM from '../assets/icons/lastfm.svg';
             <i class="bi bi-bluesky"></i>
             <span>Bluesky</span>
         </a>
+        </nav>
 
-        <hr class="large">
-
+    </article>
+    <!-- <article class="about-me">
         <a class="chip fill" href="https://www.last.fm/user/Quinxxx" target="_blank">
             <img src={lastFM.src} height="10px" width="10px" />
             <span>LastFM</span>
@@ -88,7 +88,7 @@ import lastFM from '../assets/icons/lastfm.svg';
             <i class="bi bi-spotify"></i>
             <span>Spotify</span>
         </a>
-    </article>
+    </article> -->
 
 </div>
 
@@ -101,7 +101,7 @@ import lastFM from '../assets/icons/lastfm.svg';
     padding-top: 5%;
 }
 
-.article, .about-me {
+#article, #about-me {
     align-items: center;
     display: block;
 
@@ -114,7 +114,7 @@ import lastFM from '../assets/icons/lastfm.svg';
     margin-left: 10px;
 }
 
-.about-me {
+#about-me {
     margin-top: 20px;
 }
 
@@ -124,6 +124,10 @@ import lastFM from '../assets/icons/lastfm.svg';
 
 .chip {
     margin-top: 0.5rem;
+}
+
+.reviews-container {
+    margin-top: 5px;
 }
 
 @media (max-width: 768px) {

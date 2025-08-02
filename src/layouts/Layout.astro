@@ -1,4 +1,5 @@
 ---
+import { ClientRouter} from "astro:transitions";
 import Navbar from '../components/Navbar.astro';
 import "/styles/globals.css";
 import "/styles/themes.css";
@@ -23,6 +24,7 @@ import ThemeChanger from '../components/ThemeChanger.astro';
 		<meta content="https://mudaranrhiod.xyz/" property="og:url" />
 		<meta content="https://mudaranrhiod.xyz/blobmoodlecozy.png" property="og:image" />
 		<meta content="oklch(72.785% 0.07856 77.143)" data-react-helmet="true" name="theme-color" />
+		<ClientRouter />
 	</head>
 	<body>
 		<slot />
