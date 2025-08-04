@@ -28,10 +28,12 @@ function displayReviews(reviews) {
     reviews.forEach(review => {
         const reviewEl = document.createElement("li")
         reviewEl.innerHTML = `
-            <img class="round" src="${review.sender.profilePhoto}">
+            <div style="background-color: transparent" class="avatar-container shape sided-cookie9">
+                <img src="${review.sender.profilePhoto}" class="responsive" />
+            </div>
             <div class="min">
-                <h6 class="small">${review.sender.username}</h6>
-                <div class="review-comment">${review.comment}</div>
+                <h6 class="small" style="color:var(--on-surface)">${review.sender.username}</h6>
+                <div class="review-comment" style="color:var(--secondary)">${review.comment}</div>
             </div>
         `;
 
