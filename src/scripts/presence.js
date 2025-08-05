@@ -1,4 +1,5 @@
-// Lanyard, fully AI generated sob (not proud of this)
+document.addEventListener("astro:page-load", () => {
+  // Lanyard, fully AI generated sob (not proud of this)
 
 const DISCORD_USER_ID = "807170846497570848";
 
@@ -265,3 +266,4 @@ function getStatusText(status) {
   };
   return statusMap[status.toLowerCase()] || "Offline";
 }
+})

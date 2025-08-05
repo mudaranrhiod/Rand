@@ -1,4 +1,5 @@
-const userId = "807170846497570848";
+document.addEventListener("astro:page-load", () => {
+    const userId = "807170846497570848";
 
 fetchReviews();
 
@@ -32,7 +33,8 @@ function displayReviews(reviews) {
                 <img src="${review.sender.profilePhoto}" class="responsive" />
             </div>
             <div class="min">
-                <h6 class="small" style="color:var(--on-surface)">${review.sender.username}</h6>
+                <a style="display:inline;" href="https://discord.com/users/${review.sender.discordID}" target="_blank"><h6 class="small" style="color:var(--on-surface)">${review.sender.username}</a>
+                <span style="color:var(--on-surface-variant); font-size: 12px;">${review.timestamp}</span></h6>
                 <div class="review-comment" style="color:var(--secondary)">${review.comment}</div>
             </div>
         `;
@@ -40,3 +42,4 @@ function displayReviews(reviews) {
         container.appendChild(reviewEl);
     });
 }
+})

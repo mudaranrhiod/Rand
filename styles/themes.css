@@ -37,7 +37,7 @@ body.eyecandy {
   --on-primary-container: #e9ddff;
   --secondary: var(--ec-text2);
   --on-secondary: var(--ec-bginput);
-  --secondary-container: #4a4458;
+  --secondary-container: var(--ec-button);
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;
@@ -78,7 +78,7 @@ body.ctp-frappe {
   --on-primary-container: #e9ddff;
   --secondary: var(--ctp-frappe-subtext1);
   --on-secondary: var(--ctp-frappe-surface0);
-  --secondary-container: #4a4458;
+  --secondary-container: var(--ctp-frappe-surface0);
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;
@@ -117,7 +117,7 @@ body.ctp-macchiato {
   --on-primary-container: #e9ddff;
   --secondary: var(--ctp-macchiato-subtext1);
   --on-secondary: var(--ctp-macchiato-surface0);
-  --secondary-container: #4a4458;
+  --secondary-container: var(--ctp-macchiato-surface0);
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;
@@ -156,7 +156,7 @@ body.ctp-mocha {
   --on-primary-container: #e9ddff;
   --secondary: var(--ctp-mocha-subtext1);
   --on-secondary: var(--ctp-mocha-surface0);
-  --secondary-container: #4a4458;
+  --secondary-container: var(--ctp-mocha-surface0);
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;
@@ -195,7 +195,7 @@ body.cityfog {
   --on-primary-container: #e9ddff;
   --secondary: var(--cf-txt2);
   --on-secondary: var(--cf-bg4);
-  --secondary-container: #4a4458;
+  --secondary-container: var(--cf-acc1);
   --on-secondary-container: #e8def8;
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;

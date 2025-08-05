@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li>
-                        <a data-ui="#themeDialog">
+                        <a data-ui="#themeDialog" transition:persist>
                             <i>palette</i>
                             Themes
                         </a>
@@ -51,9 +51,8 @@
         <button class="circle small cityfog" onclick="setTheme('cityfog')"></button>
     </div>
     <nav class="right-align">
-        <!-- reset button
-        <button onclick="resetTheme()">Rest theme</button> -->
-        <button data-ui="#themeDialog">Close</button>
+        <button class="fill" onclick="resetTheme()">Rest theme</button>
+        <button data-ui="#themeDialog" transition:persist>Close</button>
     </nav>
 </dialog>
 

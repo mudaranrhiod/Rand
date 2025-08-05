@@ -3,6 +3,7 @@
 // List of themes
 // first time using arrays #cool #wow
 const themes = ["eyecandy", "ctp-frappe" , "ctp-macchiato" , "ctp-mocha", "cityfog"];
+const defaultTheme = "eyecandy";
 
 function setTheme(theme) {
   document.body.classList.remove(...themes);
@@ -10,15 +11,19 @@ function setTheme(theme) {
   localStorage.setItem("theme", theme);
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+function initTheme() {
   const savedTheme = localStorage.getItem("theme")
-  const defaultTheme = "eyecandy";
   setTheme(savedTheme || defaultTheme);
-});
+}
+
+// this stuff is for astro page trations breaking theme changing
+// not sure if its done right but im lowky stupid at following docs
+document.addEventListener("DOMContentLoaded", initTheme);
+document.addEventListener("astro:page-load", initTheme);
 
 function resetTheme() {
   localStorage.removeItem("theme");
-  setTheme("eyecandy");
+  setTheme(defaultTheme);
 }
 
 </script>
