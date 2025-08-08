@@ -69,6 +69,11 @@ body.eyecandy {
   --surface-container-highest: #363438;
 
   --elevate1: 0 .125rem .125rem 0 var(--ec-hover2);
+
+  --online: "oklch(72.437% 0.08404 134.335)";
+  --idle: "oklch(72.759% 0.09315 83.593)";
+  --dnd: "oklch(70.948% 0.06793 52.597)";
+  --offline: "oklch(56.804% 0.03526 287.192)";
 } 
 
 body.ctp-frappe {

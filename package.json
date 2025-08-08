@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "astro": "^5.11.0",
+    "beercss": "^3.11.33",
     "mdui": "^2.1.4"
   }
 }

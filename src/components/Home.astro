@@ -1,5 +1,7 @@
 ---
 import lastFM from '../assets/icons/lastfm.svg';
+import About from '../components/me/about.astro';
+import Music from '../components/me/music.astro';
 ---
 
 <div class="page active" id="page1">
@@ -7,16 +9,13 @@ import lastFM from '../assets/icons/lastfm.svg';
         <div class="profile-container">
             <div class="presence-container">
                 <div class="user-container">
-                    <div class="avatar-container shape sided-cookie9 extra">
-                    <img id="avatar" class="responsive" draggable="false" alt="profile picture" />
-                    <div class="status-badge offline" id="status-badge"></div>
+                    <div id="avatar-container" class="avatar-container shape sided-cookie9 extra" data-ui="#snackbar" transition:persist>
+                    <span id="status-badge"></span>
                 </div>
                 <div class="user-info">
-                    <div id="username"></div>
-                    <div id="user-status">
-
-                    <span class="status-text"></span>
-                    <span class="status-indicator offline"></span>
+                    <span id="username"></span>
+                    <span id="status-text"></span>
+                    <div id="user-status"></div>
                 </div>
                 </div>
             </div>
@@ -24,9 +23,8 @@ import lastFM from '../assets/icons/lastfm.svg';
             <div id="presence-data">
             <!-- Activities will appear here -->
             </div>
-            </div>
         </div>
-        
+
         <div class="reviews-container">
             <details>
                 <summary>
@@ -42,58 +40,54 @@ import lastFM from '../assets/icons/lastfm.svg';
                 </ul>
                 </details>
         </div>
+        </div>
     </article>
-
     <article id="about-me">
-        <ul class="list no-space">
-            <li>I love red pandas and cats</li>
-            <li>I think I have an odd obbsession with black pitted olives</li>
-            <li>I'm trying to learn JS (doing a bad job)</li>
-        </ul>
-
-        <nav class="scroll">
-            <a class="chip fill" href="https://discord.com/users/807170846497570848" target="_blank">
-            <i class="bi bi-discord"></i>
-            <span>Discord</span>
-        </a>
-        <a class="chip fill" href="https://discord.gg/QAKs6UdeBS" target="_blank" >
-            <i class="bi bi-discord"></i>
-            <span>My server</span>
-        </a>
-        <a class="chip fill" href="https://www.tiktok.com/@moodlesaurusrex" target="_blank">
-            <i class="bi bi-tiktok"></i>
-            <span>Tiktok</span>
-        </a>
-        <a class="chip fill" href="https://t.me/IIV_786" target="_blank">
-            <i class="bi bi-telegram"></i>
-            <span>Telegram</span>
-        </a>
-        <a class="chip fill" href="https://bsky.app/profile/mudrhiod.bannana.me" target="_blank">
-            <i class="bi bi-bluesky"></i>
-            <span>Bluesky</span>
-        </a>
+        <nav class="group connected tetiary-container">
+            <button class="left-round active" data-ui="#about">
+                <i>person</i>
+            </button>
+            <button class="right-round" data-ui="#music">
+                <i>music_note</i>
+            </button>
         </nav>
 
+        <About />
+	    <Music />
+        
     </article>
-    <!-- <article class="about-me">
-        <a class="chip fill" href="https://www.last.fm/user/Quinxxx" target="_blank">
-            <img src={lastFM.src} height="10px" width="10px" />
-            <span>LastFM</span>
-        </a>
-        <a class="chip fill" href="https://music.youtube.com/playlist?list=PL1cu66qZ1RUoeQEoKUnLdd2X6uojwBb6L&si=Iv-7uswty5fIyk4E" target="_blank">
-            <i class="bi bi-youtube"></i>
-            <span>YTM playlist</span>
-        </a>
-        <a class="chip fill fill" href="https://open.spotify.com/user/0prhvv7b4do7eqw59zwvgtwcn?si=5abf335ec9524c3a" target="_blank">
-            <i class="bi bi-spotify"></i>
-            <span>Spotify</span>
-        </a>
-    </article> -->
-
 </div>
 
-<!-- <script type="module" src="/scripts/lanyard.js"></script> -->
-<script src="../scripts/presence.js"></script>
+<div class="snackbar" id="snackbar">
+  <span>The wheel weaves as the wheel wills</span>
+</div>
+
+<script transition:persist>
+document.addEventListener("astro:page-load", () => {
+    const aboutBtn = document.querySelector('[data-ui="#about"]');
+    const musicBtn = document.querySelector('[data-ui="#music"]');
+    const aboutPage = document.getElementById("about");
+    const musicPage = document.getElementById("music");
+
+    // default button selected is about
+    aboutBtn.addEventListener('click', () => {
+        musicBtn.classList.remove('active');
+        musicPage.classList.remove('active');
+        aboutBtn.classList.add('active');
+        aboutPage.classList.add('active');
+    });
+
+    musicBtn.addEventListener('click', () => {
+        aboutBtn.classList.remove('active');
+        aboutPage.classList.remove('active');
+        musicBtn.classList.add('active');
+        musicPage.classList.add('active');
+    });
+});
+</script>
+
+<script src="../scripts/lanyard.js"></script>
+<!-- <script src="../scripts/presence.js"></script> -->
 <script src="../scripts/reviewdb.js"></script>
 
 <style>
@@ -128,6 +122,21 @@ import lastFM from '../assets/icons/lastfm.svg';
 
 .reviews-container {
     margin-top: 5px;
+}
+
+.group {
+    align-items: center;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+
+    max-width: 60%;
+    margin: auto;
+    gap: .5rem;
+}
+
+nav {
+    margin-left: 5px;
 }
 
 @media (max-width: 768px) {

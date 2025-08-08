@@ -1,19 +1,17 @@
 document.addEventListener("astro:page-load", () => {
-    const userId = "807170846497570848";
+const userId = "807170846497570848";
 
 fetchReviews();
 
 async function fetchReviews() {
     try {
         const response = await fetch(`https://manti.vendicated.dev/api/reviewdb/users/${userId}/reviews`)
-
         if (!response.ok) {
             throw new Error ("Error")
         }
-        
         const data = await response.json()
         console.log(data)
-
+        data.reviews = data.reviews.filter(reviews => reviews.id !== 0);
         displayReviews(data.reviews);
     }
     catch(error) {
@@ -22,10 +20,8 @@ async function fetchReviews() {
 }
 
 function displayReviews(reviews) {
-
     const container = document.getElementById("user-reviews");
     container.innerHTML = '';
-
     reviews.forEach(review => {
         const reviewEl = document.createElement("li")
         reviewEl.innerHTML = `
@@ -38,7 +34,6 @@ function displayReviews(reviews) {
                 <div class="review-comment" style="color:var(--secondary)">${review.comment}</div>
             </div>
         `;
-
         container.appendChild(reviewEl);
     });
 }
