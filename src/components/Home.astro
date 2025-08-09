@@ -5,44 +5,34 @@ import Music from '../components/me/music.astro';
 ---
 
 <div class="page active" id="page1">
-    <article id="article">
-        <div class="profile-container">
-            <div class="presence-container">
-                <div class="user-container">
-                    <div id="avatar-container" class="avatar-container shape sided-cookie9 extra" data-ui="#snackbar" transition:persist>
-                    <span id="status-badge"></span>
-                </div>
-                <div class="user-info">
-                    <span id="username"></span>
-                    <span id="status-text"></span>
-                    <div id="user-status"></div>
-                </div>
-                </div>
-            </div>
-
-            <div id="presence-data">
-            <!-- Activities will appear here -->
-            </div>
+    <div class="user-container">
+        <div id="avatar-container" class="avatar-container shape sided-cookie9 extra" data-ui="#snackbar" transition:persist>
         </div>
-
-        <div class="reviews-container">
-            <details>
-                <summary>
-                    <article class="round border no-elevate">
-                        <nav>
-                            <div class="max">Reviews</div>
-                            <i>expand_more</i>
-                        </nav>
-                    </article>
-                </summary>
-                <ul id="user-reviews" class="list border" transition:persist>
-                    <!-- Reviews will appear here -->
-                </ul>
-                </details>
-        </div>
-        </div>
-    </article>
-    <article id="about-me">
+    </div>
+    <div class="user-info">
+        <div id="username"></div>
+        <article class="border" id="user-status"></article>
+    </div>
+    <div id="status-text" class="status"></div>
+    <div id="presence-data">
+        <!-- Activities will appear here -->
+    </div>
+    <div class="reviews-container">
+        <details>
+            <summary>
+                <article id="reviewbtn" class="round border no-elevate">
+                    <nav>
+                        <div class="max">Reviews</div>
+                        <i>expand_more</i>
+                    </nav>
+                </article>
+            </summary>
+            <ul id="user-reviews" class="list border" transition:persist>
+                <!-- Reviews will appear here -->
+            </ul>
+        </details>
+    </div>
+    <article id="about-me" class="round">
         <nav class="group connected tetiary-container">
             <button class="left-round active" data-ui="#about">
                 <i>person</i>
@@ -51,14 +41,12 @@ import Music from '../components/me/music.astro';
                 <i>music_note</i>
             </button>
         </nav>
-
         <About />
 	    <Music />
-        
     </article>
 </div>
 
-<div class="snackbar" id="snackbar">
+<div class="snackbar" id="snackbar" transition:persist>
   <span>The wheel weaves as the wheel wills</span>
 </div>
 
@@ -87,7 +75,6 @@ document.addEventListener("astro:page-load", () => {
 </script>
 
 <script src="../scripts/lanyard.js"></script>
-<!-- <script src="../scripts/presence.js"></script> -->
 <script src="../scripts/reviewdb.js"></script>
 
 <style>
@@ -101,6 +88,15 @@ document.addEventListener("astro:page-load", () => {
 
     max-width: 40%;
     max-height: 40%;
+    margin: auto;
+}
+
+.status {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    max-width: 40%;
     margin: auto;
 }
 
@@ -121,7 +117,11 @@ document.addEventListener("astro:page-load", () => {
 }
 
 .reviews-container {
-    margin-top: 5px;
+    align-items: center;
+    display: block;
+    justify-content: center;
+    max-width: 40%;
+    margin: auto;
 }
 
 .group {
@@ -141,6 +141,14 @@ nav {
 
 @media (max-width: 768px) {
     #article, #about-me {
+        max-width: 90%;
+    }
+
+    .reviews-container {
+        max-width: 90%;
+    }
+
+    .status {
         max-width: 90%;
     }
 }

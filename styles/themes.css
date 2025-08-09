@@ -70,11 +70,11 @@ body.eyecandy {
 
   --elevate1: 0 .125rem .125rem 0 var(--ec-hover2);
 
-  --online: "oklch(72.437% 0.08404 134.335)";
-  --idle: "oklch(72.759% 0.09315 83.593)";
-  --dnd: "oklch(70.948% 0.06793 52.597)";
-  --offline: "oklch(56.804% 0.03526 287.192)";
-} 
+  --status-online: oklch(72.437% 0.08404 134.335);
+  --status-idle: oklch(72.759% 0.09315 83.593);
+  --status-dnd: oklch(70.948% 0.06793 52.597);
+  --status-offline: oklch(56.804% 0.03526 287.192);
+}
 
 body.ctp-frappe {
   --primary: var(--ctp-frappe-blue);
@@ -113,6 +113,11 @@ body.ctp-frappe {
   --surface-container: var(--ctp-frappe-crust);
   --surface-container-high: var(--ctp-frappe-crust);
   --surface-container-highest: #363438;
+
+  --status-online: var(--ctp-frappe-green);
+  --status-idle: var(--ctp-frappe-yellow);
+  --status-dnd: var(--ctp-frappe-red);
+  --status-offline: var(--ctp-frappe-surface2);
 }
 
 body.ctp-macchiato {
@@ -152,6 +157,11 @@ body.ctp-macchiato {
   --surface-container: var(--ctp-macchiato-crust);
   --surface-container-high: var(--ctp-macchiato-crust);
   --surface-container-highest: #363438;
+
+  --status-online: var(--ctp-macchiato-green);
+  --status-idle: var(--ctp-macchiato-yellow);
+  --status-dnd: var(--ctp-macchiato-red);
+  --status-offline: var(--ctp-macchiato-surface2);
 }
 
 body.ctp-mocha {
@@ -191,6 +201,11 @@ body.ctp-mocha {
   --surface-container: var(--ctp-mocha-crust);
   --surface-container-high: var(--ctp-mocha-crust);
   --surface-container-highest: #363438;
+
+  --status-online: var(--ctp-mocha-green);
+  --status-idle: var(--ctp-mocha-yellow);
+  --status-dnd: var(--ctp-mocha-red);
+  --status-offline: var(--ctp-mocha-surface2);
 }
 
 body.cityfog {
@@ -230,4 +245,9 @@ body.cityfog {
   --surface-container: var(--cf-bg1);
   --surface-container-high: var(--cf-bg1);
   --surface-container-highest: #363438;
+
+  --status-online: var(--cf-green);
+  --status-idle: var(--cf-yellow);
+  --status-dnd: var(--cf-red);
+  --status-offline: var(--cf-bg4);
 }

@@ -45,17 +45,66 @@ lanyard(data => {
     const displayname = data.discord_user.display_name;
     document.getElementById("username").textContent = displayname;
 
-    const userstatustext = data.activities.find(activities => activities.type = 4);
+    
+
+    // https://github.com/KrstlSkll69/krstlskll69.github.com/blob/efc5644a83d3c02e51f4a6eea52fdee95c73878d/Javascript/DiscordProfile.js#L967-L1054
+    const webActive = data?.active_on_discord_web;
+    const desktopActive = data?.active_on_discord_desktop;
+    const mobileActive = data?.active_on_discord_mobile;
+    const consoleActive = data?.active_on_discord_embedded;
+    const discordStatus = data?.discord_status;
+
+    const userstatustext = data.activities.find(activities => activities.type === 4);
     document.getElementById("status-text").innerHTML = `
         <p>${userstatustext.state}</p>
     `;
 
-    const desktopActive = data.active_on_discord_desktop;
-    const embeddedActive = data.active_on_discord_embedded;
-    const mobileActive = data.active_on_discord_mobile;
-    const webActive = data.active_on_discord_web;
-    const discordstatus = data.discord_status;
+    const platformIndicatorContainer = document.getElementById(
+        "user-status"
+    );
 
-    
+    if (!platformIndicatorContainer) {
+        console.log("Platform indicator container not found in DOM");
+        return;
+    }
+
+    const rootStyles = getComputedStyle(document.body);
+
+    const statusColors = {
+    online: rootStyles.getPropertyValue('--status-online').trim(),
+    idle: rootStyles.getPropertyValue('--status-idle').trim(),
+    dnd: rootStyles.getPropertyValue('--status-dnd').trim(),
+    offline: rootStyles.getPropertyValue('--status-offline').trim(),
+    };
+
+    const statusColor = statusColors[discordStatus] || statusColors.offline;
+    let platformIconsHTML = "";
+
+    if (webActive) {
+        platformIconsHTML += `
+            <i style="color:${statusColor}">public</i>
+        `;
+    } if (desktopActive) {
+        platformIconsHTML += `
+            <i style="color:${statusColor}">desktop_windows</i>
+        `;
+    } if (mobileActive) {
+        platformIconsHTML += `
+            <i style="color:${statusColor}">phone_android</i>
+        `;
+    } if (consoleActive) {
+        platformIconsHTML += `
+            <i style="color:${statusColor}">videogame_asset</i>
+        `;
+    } if (discordStatus === "offline") {
+        platformIconsHTML += `
+            <p style="color:${statusColor}">Offline</p>
+        `;
+    }
+
+    platformIndicatorContainer.innerHTML = platformIconsHTML;
+    platformIndicatorContainer.style.display = "flex";
+
+    console.log("Platform indicator updated successfully");
 });
 })

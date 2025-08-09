@@ -23,7 +23,7 @@ function displayReviews(reviews) {
     const container = document.getElementById("user-reviews");
     container.innerHTML = '';
     reviews.forEach(review => {
-        const reviewEl = document.createElement("li")
+        const reviewEl = document.createElement("li");
         reviewEl.innerHTML = `
             <div style="background-color: transparent" class="avatar-container shape sided-cookie9">
                 <img src="${review.sender.profilePhoto}" class="responsive" />

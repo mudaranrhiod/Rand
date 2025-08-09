@@ -1,38 +1,3 @@
-:root {
-
-/* To use default rounded icons */
---font-icon: "Material Symbols Rounded";
-
---bg-1: oklch(0.41 0.0233 291.9);
---bg-2: oklch(0.37 0.0204 289.18);
---bg-3: oklch(0.4 0.0234 291.86);
---bg-4: oklch(0.44 0.032 318.18);
-
---bg-card: oklch(0.4 0.0253 294.38);
-
---button-primary: oklch(0.47 0.0208 289.1);
---button-primary-hover: oklch(0.38 0.0169 290.16);
-
---candy-accent: oklch(0.73 0.0786 77.15);
---candy-accent-hover: oklch(0.66 0.0965 76.28);
---primary-container: oklch(0.71 0.081 346.05);
---primary-container-hover: oklch(0.63 0.1103 347.59);
---candy-green: oklch(0.79 0.0762 83.8);
-
---hover-1: oklch(0.84 0.0249 306.91 / 24.31%);
---hover-2: #10132033;
-
---text-1: oklch(0.93 0.0027 286.35);
---text-2: oklch(0.81 0.0196 282.68);
---text-muted: oklch(0.79 0.0523 327.09);
---text-link: oklch(0.9264 0.0536 68.9);
---text-link-alt: oklch(0.8732 0.0937 67.64);
-
---info-foreground: oklch(0.8079 0.0687 287.56);
---info-background: oklch(0.8079 0.0687 287.56 / 14.9%);
---info-hover: oklch(0.7015 0.1097 286.25);
-}
-
 html, body {
     margin: 0px;
     min-height: 100vh;
@@ -48,7 +13,7 @@ body {
 }
 
 /* Lanyard */
-/* Presence Container */
+
 .presence-container {
   padding-top: 30px;
 }
@@ -68,8 +33,8 @@ body {
 }
 
 #avatar {
-  width: 64px;
-  height: 64px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -92,7 +57,7 @@ body {
 }
 
 /* Status Colors */
-.status-badge.online { background-color: #34A853; }
+.status-badge.online { background-color: #000; }
 .status-badge.idle { background-color: #FBBC05; }
 .status-badge.dnd { background-color: #EA4335; }
 .status-badge.offline { background-color: #9AA0A6; }
@@ -100,34 +65,31 @@ body {
 /* User Info */
 .user-info {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
 }
 
 #username {
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.30rem;
   color: var(--on-surface);
-  margin: 0;
-  line-height: 1.2;
 }
 
 #user-status {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: flex-start;
+  padding: 5px;
+  max-width: fit-content;
 }
 
-.status-text {
-  font-size: 0.875rem;
-  color: var(--on-surface-variant);
-  white-space: normal;
-  overflow: visible;
-  text-overflow: clip;
-  word-break: break-word;
-  max-width: 100%;
-  line-height: 1.3;
+#status-text {
+  font-size: 1.0rem;
+  color: var(--secondary);
+}
+
+*+:is(address,article,blockquote,code,.field,fieldset,form,.grid,h1,h2,h3,h4,h5,h6,nav,ol,p,pre,.row,section,aside,table,.tabs,ul) {
+  margin-block-start: 0rem;
 }
 
 /* Activities */
