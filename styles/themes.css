@@ -2,7 +2,6 @@
 @import url('https://cdn.jsdelivr.net/npm/@catppuccin/palette/css/catppuccin.css');
 
 :root,
-
 body.eyecandy {
   /* eye candy vars */
   --ec-bg1: oklch(41.264% 0.0233 291.865);
@@ -38,7 +37,7 @@ body.eyecandy {
   --secondary: var(--ec-text2);
   --on-secondary: var(--ec-bginput);
   --secondary-container: var(--ec-button);
-  --on-secondary-container: #e8def8;
+  --on-secondary-container: var(--ec-text1);
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;
   --tertiary-container: #633b48;
@@ -84,7 +83,7 @@ body.ctp-frappe {
   --secondary: var(--ctp-frappe-subtext1);
   --on-secondary: var(--ctp-frappe-surface0);
   --secondary-container: var(--ctp-frappe-surface0);
-  --on-secondary-container: #e8def8;
+  --on-secondary-container: var(--ctp-frappe-text);
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;
   --tertiary-container: #633b48;
@@ -128,7 +127,7 @@ body.ctp-macchiato {
   --secondary: var(--ctp-macchiato-subtext1);
   --on-secondary: var(--ctp-macchiato-surface0);
   --secondary-container: var(--ctp-macchiato-surface0);
-  --on-secondary-container: #e8def8;
+  --on-secondary-container: var(--ctp-macchiato-text);
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;
   --tertiary-container: #633b48;
@@ -172,7 +171,7 @@ body.ctp-mocha {
   --secondary: var(--ctp-mocha-subtext1);
   --on-secondary: var(--ctp-mocha-surface0);
   --secondary-container: var(--ctp-mocha-surface0);
-  --on-secondary-container: #e8def8;
+  --on-secondary-container: var(--ctp-mocha-text);
   --tertiary: #efb8c8;
   --on-tertiary: #4a2532;
   --tertiary-container: #633b48;

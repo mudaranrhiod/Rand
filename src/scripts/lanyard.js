@@ -45,8 +45,6 @@ lanyard(data => {
     const displayname = data.discord_user.display_name;
     document.getElementById("username").textContent = displayname;
 
-    
-
     // https://github.com/KrstlSkll69/krstlskll69.github.com/blob/efc5644a83d3c02e51f4a6eea52fdee95c73878d/Javascript/DiscordProfile.js#L967-L1054
     const webActive = data?.active_on_discord_web;
     const desktopActive = data?.active_on_discord_desktop;
@@ -59,9 +57,7 @@ lanyard(data => {
         <p>${userstatustext.state}</p>
     `;
 
-    const platformIndicatorContainer = document.getElementById(
-        "user-status"
-    );
+    const platformIndicatorContainer = document.getElementById("user-status");
 
     if (!platformIndicatorContainer) {
         console.log("Platform indicator container not found in DOM");
@@ -69,12 +65,11 @@ lanyard(data => {
     }
 
     const rootStyles = getComputedStyle(document.body);
-
     const statusColors = {
-    online: rootStyles.getPropertyValue('--status-online').trim(),
-    idle: rootStyles.getPropertyValue('--status-idle').trim(),
-    dnd: rootStyles.getPropertyValue('--status-dnd').trim(),
-    offline: rootStyles.getPropertyValue('--status-offline').trim(),
+        online: rootStyles.getPropertyValue('--status-online').trim(),
+        idle: rootStyles.getPropertyValue('--status-idle').trim(),
+        dnd: rootStyles.getPropertyValue('--status-dnd').trim(),
+        offline: rootStyles.getPropertyValue('--status-offline').trim(),
     };
 
     const statusColor = statusColors[discordStatus] || statusColors.offline;
@@ -96,15 +91,90 @@ lanyard(data => {
         platformIconsHTML += `
             <i style="color:${statusColor}">videogame_asset</i>
         `;
-    } if (discordStatus === "offline") {
+    } if (data.discord_status === "offline") {
         platformIconsHTML += `
             <p style="color:${statusColor}">Offline</p>
         `;
     }
-
     platformIndicatorContainer.innerHTML = platformIconsHTML;
     platformIndicatorContainer.style.display = "flex";
-
     console.log("Platform indicator updated successfully");
+
+
+    function MsToTime(ms) {
+        const totalSeconds = Math.floor(ms / 1000);
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        if (hours > 0) {
+            // show hours if it has any, idk if i followed this right
+            return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds
+            .toString()
+            .padStart(2, '0')}`;
+        } else {
+            // only minutes and seconds
+            return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+    }
+
+    const presenceEl = document.getElementById("presence-data");
+    presenceEl.innerHTML = '';
+
+    data.activities.filter(activity => activity.type !== 4).forEach(activity => {
+        function getImageUrl() {
+            if (!activity?.assets?.large_image) return null;
+            if (activity.assets.large_image.startsWith('mp:external/')) {
+                return `https://media.discordapp.net/external/${activity.assets.large_image.replace('mp:external/', '')}
+            `;
+            } else if (activity.application_id) {
+                return `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png
+            `;
+            }
+        }
+        console.log(activity);
+        
+        const types = [ 'Playing', 'Streaming', 'Listening to', 'Watching', 'Custom' ];
+        const activitytype = types[activity.type];
+        const imageUrl = getImageUrl();
+
+        let timestampsEl = '';
+        function progressUpdate() {
+            if ((activity.type === 2 || activity.type === 3) && activity.timestamps?.start && activity.timestamps?.end) {
+            const startTime = Date.now() - activity.timestamps.start;
+            const duration = activity.timestamps.end - activity.timestamps.start;
+            const progress = Math.min((startTime/duration) * 100, 100);
+
+            const startTimeFormatted = MsToTime(startTime); // mm:ss or hh:mm:ss
+            const durationFormatted = MsToTime(duration);
+
+            timestampsEl = `
+                <p style="margin-left:5px"> <progress value="${progress}" max="100"></progress> ${startTimeFormatted} ${durationFormatted}</p>
+            `;
+            }
+        }
+        
+        progressUpdate();
+        setInterval(progressUpdate, 1000);
+        
+        const reviewEl = document.getElementById("reviews-container");
+        reviewEl.style.marginTop = '-10px'
+
+        presenceEl.innerHTML += `
+            <article class="round" style="margin-bottom:10px;">
+                <p style="margin-top:-5px; margin-left:5px">${activitytype} ${activity.name}</p>
+                <div class="row">
+                    <img class="round large" src="${imageUrl}" style="margin-left: 5px; height:80px; width:80px;">
+                    <div class="max">
+                        <p>${activity.details}</p>
+                        <p>${activity.state}</p>
+                    </div>
+                </div>
+                ${timestampsEl}
+            </article>
+        `
+    });
+
+
 });
 })

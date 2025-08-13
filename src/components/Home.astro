@@ -17,7 +17,7 @@ import Music from '../components/me/music.astro';
     <div id="presence-data">
         <!-- Activities will appear here -->
     </div>
-    <div class="reviews-container">
+    <div id="reviews-container" class="reviews-container">
         <details>
             <summary>
                 <article id="reviewbtn" class="round border no-elevate">
@@ -91,6 +91,17 @@ document.addEventListener("astro:page-load", () => {
     margin: auto;
 }
 
+#presence-data {
+    align-items: center;
+    display: block;
+
+    max-width: 40%;
+    max-height: 40%;
+    margin: auto;
+
+    padding-bottom: 20px;
+}
+
 .status {
     align-items: center;
     display: flex;
@@ -140,7 +151,7 @@ nav {
 }
 
 @media (max-width: 768px) {
-    #article, #about-me {
+    #article, #about-me, #presence-data {
         max-width: 90%;
     }
 

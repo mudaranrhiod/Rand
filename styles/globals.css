@@ -8,6 +8,16 @@ body {
     padding-bottom: 10px;
 }
 
+progress {
+  color: var(--primary-container);
+  background-color: var(--on-secondary)
+}
+
+nav.group.connected>:is(.button,button).active {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
 .list>li {
     white-space: wrap !important;
 }
